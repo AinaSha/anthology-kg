@@ -1,7 +1,10 @@
 @import './vars';
 
 .header {
- background-color: $color-light-blue;
+    position: sticky;
+    top:0;
+    background-color: $color-light-blue;
+    z-index: 5;
 }
 
 .header-inner {
@@ -31,6 +34,10 @@
         margin-left: 172px;
     }
 
+    .active-item {
+        color: #2187ED;
+    }
+
     &__link {
         font-weight: $fw-semiBold;
         font-size: 20px;
@@ -47,8 +54,9 @@
 
 
 @media (max-width: 1240px) {
+
     .header-inner {
-        max-width: 83%;
+        max-width: 80%;
     }
 
     .nav {
@@ -61,23 +69,20 @@
 @media (max-width: 1024px){
     .nav {
         &__item + &__item {
-            margin-left: 100px;
-        }
-    
-        &__link {
-            font-size: 18px;
+            margin-left: 90px;
         }
     } 
 }
 
 @media (max-width: 900px){
+    
     .nav {
         &__item + &__item {
             margin-left: 80px;
         }
     
         &__link {
-            font-size: 14px;
+            font-size: 14px; 
             line-height: 24px
         }
     }  
@@ -85,16 +90,17 @@
 }
 
 @media (max-width: 768px) {
+
     .header-inner {
         max-width: 80%;
         padding: 13px 0;
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 767.9px) {
     
     .header-inner {
-        max-width: 60%;
+        max-width: 55%;
         display: flex;
         flex-direction: row-reverse;
         padding: 10px 0;
@@ -102,8 +108,8 @@
 
     .header-logo{
         img {
-         width: 77px;
-         height: 82px;
+         width: 55px;
+         height: 59px;
         }
      }
 
@@ -122,7 +128,7 @@
         position: absolute;
         left: 0;
         width: 100%;
-        height: 8%;
+        height: 10%;
         background-color: $color-white;
         transition: all 0.3s ease 0s;
         border-radius: 2px;
@@ -164,7 +170,7 @@
 
     .nav {
         position: fixed;
-        top: 0;
+        top: 79px;
         left: -50%;
         width: 50%; 
         height: 100%;
@@ -173,7 +179,7 @@
         padding: 150px 0px 30px 0px;
         transition: left 0.3s ease 0s;
         overflow: auto;
-   
+      
 
         &__list {
             flex-direction: column;
@@ -188,17 +194,6 @@
 
     }
 
-    .nav::before {
-        content: "";
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 102px;
-        background-color: $color-light-blue;
-        z-index: 2;
-    }
-
     .nav.menu-show {
         left: 0;
     }
@@ -206,49 +201,36 @@
 }
 
 
-
 @media (max-width: 425px) {
+
     .header-inner {
-        max-width: 60%;
+        max-width: 57%;
         padding: 5px 0;
     }
+
     .header-logo{
         img {
-         width: 55px;
-         height: 59px;
+         width: 34px;
+         height: 35px;
         }
      }
 
-    .nav {
-        left: -100%;
-        width: 100%;   
-    }
 
-    .nav::before {
-        height: 65px;
+    .burger {
+        width: 20px;
+        height: 15px;
     }
-
 
     .burger span,
     .burger::before,
     .burger::after {
-        height: 6%;
+        height: 9%;
     }
-}
 
-@media (max-width: 320px) {
-    .header-inner {
-        max-width: 60%;
-        padding: 5px 0;
+    .nav {
+        top: 45px;
+        left: -100%;
+        width: 100%;   
     }
-    .header-logo{
-        img {
-         width: 45px;
-         height: 48px;
-        }
-     }
 
-     .nav::before {
-        height: 58px;
-    }
 }

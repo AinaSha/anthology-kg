@@ -1,0 +1,152 @@
+@import './vars';
+
+// ***  footer ***//
+ 
+.footer {
+    background-color: $color-blue;
+ 
+    &__inner {
+        margin: 66px 0 38px 0;
+    }
+
+    &__logo {
+        max-width: 93px;
+        margin: 0 auto;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+    }
+
+    &__logo img {
+        width: 100%;
+    }
+
+    &__nav {
+        width: 68%;
+        margin: 53px auto;
+    }
+
+    &__menu-list {
+        max-width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu-link {
+        font-weight: $fw-semiBold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        &__menu-link {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    
+}
+
+@media (max-width: 767.9px){
+    .footer {
+        &__logo {
+            width: 55px;
+            height: 59px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        &__menu-list {
+            flex-direction: column;
+        }
+
+        &__menu-item + &__menu-item {
+            margin-top: 12px;
+        }
+    }
+    
+}
+
+@media (max-width: 420px) {
+    .footer {
+        &__logo {
+            width: 34px;
+            height: 35px;
+        }
+
+        &__menu-link {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &__nav {
+            margin: 28px auto 20px auto;
+        }
+    }
+}
+
+
+.social-menu {
+    max-width: 22%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+@media (max-width: 1040px) {
+    .social-menu {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-menu {
+        &__item img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .social-menu {
+        max-width: 50%;
+    }
+}
+
+
+.copyright {
+    @include details-title;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-light-grey;
+    margin-top: 76px;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        font-size: 10px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+    .copyright {
+        font-size: 8px;
+        margin-top: 29px;
+    }
+}
