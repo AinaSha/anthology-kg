@@ -549,6 +549,7 @@
             width: 100%;
             margin: 44px auto 86px auto;
         }
+
     }
 
     .slide-content {
@@ -584,6 +585,10 @@
     .swiper-button-next.swiper-navBtn:after,
     .swiper-button-prev.swiper-navBtn:after {
       font-size: 20px!important;
+    }
+
+    .swiper-pagination.swiper-pagination-bullets.slide-pag {
+        bottom: 70px!important;
     }
   }
 
@@ -621,7 +626,7 @@
     
         &__inner {
             width: 100%;
-            margin: 34px auto 14px auto;
+            margin: 34px auto 34px auto;
         }
     }
 
@@ -649,7 +654,9 @@
         font-size: 12px;
     }
 
-
+    .swiper-pagination.swiper-pagination-bullets.slide-pag {
+        bottom: 20px!important;
+    }
   }
 
 
@@ -704,9 +711,11 @@
 @media (max-width: 950px) {
 
     .category {
-        &__list .list-link {
-            font-size: 16px;
-            line-height: 17px;
+        &__group {
+            max-width:70%;
+            flex-wrap: wrap;
+            row-gap: 60px;
+            margin: 92px auto 77px auto;
         }
 
     }
@@ -715,10 +724,6 @@
 @media (max-width: 768px) {
     .category {
         
-        &__list:last-child {
-           display: none;
-        }
-
         .category-inner {
             margin: 339px auto 64px auto;
         }    
@@ -737,9 +742,10 @@
             line-height: 17px;
         }
 
-        &__group {
-            margin: 92px 0 77px 0;
+        &__list {
+            width: 170px;
         }
+
     }
 
     .list-item + .list-item {
@@ -747,31 +753,26 @@
     }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 590px) {
     .category {
-        &__group {
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
- 
-
         &__list {
-            width: 170px;
+            width: 160px;
         }
 
-        &__list:last-child {
-            display: block;
-         }
+        &__group {
+            max-width: 90%;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            margin: 92px auto 77px auto;
+        }
 
-         .list-item + .list-item {
-            margin-top: 25px;
+        .list-item + .list-item {
+            margin-top: 40px;
         }
     }
-
     
+} 
 
-}
 
 @media (max-width: 425px) {
     .category {
@@ -785,7 +786,7 @@
 
         &__group {
             gap: 20px;
-            margin: 22px 0 34px 0;
+            margin: 22px auto 34px auto;
         }
       
         &__list {
@@ -808,6 +809,15 @@
 
     }  
 
+}
+
+@media (max-width: 349px) {
+    .category {
+       
+        &__group {
+            max-width: 100%;
+        }
+    }
 }
 
 
