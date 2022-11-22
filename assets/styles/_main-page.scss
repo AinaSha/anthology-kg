@@ -4,7 +4,7 @@
 .topscreen{
 
     &__wrapper {
-        background-image: url('../assets/images/banner-bgk.jpg');
+        background-image: url('../../assets/images/banner-bgk.jpg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -192,7 +192,7 @@
     }
     
     .topscreen__wrapper {
-        background-image: url('../assets/images/banner-tablet.png');
+        background-image: url('../../assets/images/banner-tablet.png');
         background-repeat: no-repeat;
         background-position: center 0px;  
     }
@@ -296,7 +296,7 @@
         margin: 8px 0 27px 0;
     }
     .topscreen__wrapper {
-        background-image: url('../assets/images/small-banner.png');
+        background-image: url('../../assets/images/small-banner.png');
         background-repeat: no-repeat;
         background-position: center 0px;  
     }
@@ -316,7 +316,7 @@
 
 .poem {
     position: relative;
-    background-image: url('../assets/images/ornament.png');
+    background-image: url('../../assets/images/ornament.png');
     background-position: top 15% right 17%;
     background-repeat: no-repeat;
     
@@ -420,7 +420,7 @@
     background: #EFEDE9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    background-image: url('../assets/images/ornament.png');
+    background-image: url('../../assets/images/ornament.png');
     background-position: top -40% left -40%;
     background-repeat: no-repeat;
 
@@ -695,7 +695,7 @@
     }
 
     .list-link::before {
-        content: url('../assets/icons/category-icon.svg');
+        content: url('../../assets/icons/category-icon.svg');
         position: relative;
         top: 0;
         margin-right: 30px;
@@ -733,7 +733,7 @@
         }    
 
         .list-link::before {
-            content: url('../assets/icons/category-icon-small.svg');
+            content: url('../../assets/icons/category-icon-small.svg');
             margin-right: 30px;
         }
 
@@ -799,7 +799,7 @@
         }
 
         .list-link::before {
-            content: url('../assets/icons/category-smallest.svg');
+            content: url('../../assets/icons/category-smallest.svg');
             margin-right: 13px;
         }
 
@@ -852,7 +852,7 @@
 //*** section most-read-poem gallery ***//
 
 .popular-poems {
-    background-image: url('../assets/images/ornament.png');
+    background-image: url('../../assets/images/ornament.png');
     background-position: bottom -47% right 53.5%;
     background-repeat: no-repeat;
     background-size: 585px 585px;
