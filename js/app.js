@@ -4,12 +4,13 @@
 
 const nav = document.querySelector('.nav'),
       burger = document.querySelector('.burger'),
-      navItem = document.querySelectorAll('.nav__item');
+      navItem = document.querySelectorAll('.nav__item'),
+      navLink = document.querySelectorAll('.nav__link');
 
       burger.addEventListener('click', () => {
         nav.classList.toggle('menu-show');
         document.body.classList.toggle('lock');
-        burger.classList.toggle('active');
+        document.querySelector('.burger', '.nav__link').classList.toggle('active');
       });
 
       navItem.forEach((item )=> {
