@@ -26,12 +26,12 @@ const nav = document.querySelector('.nav'),
 
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
-const listItems = document.querySelectorAll(".gallery-card");
+const listItems = document.querySelectorAll(".paginated-card");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
 
-const paginationLimit = 10;
+const paginationLimit = 12;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 

@@ -1,9 +1,10 @@
 // Imports
-@import './assets/styles/vars';
-@import './assets/styles/header';
-@import './assets/styles/footer';
-@import './assets/styles/main-page';
-@import './assets/styles/popular-poems';
+@import './styles/vars';
+@import './styles/header';
+@import './styles/footer';
+@import './styles/index';
+@import './styles/popular-poems';
+@import './styles/poets';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap');
@@ -49,5 +50,9 @@ body.lock {
         margin: 0 auto;
         padding: 0 30px;
     }  
+}
+
+a {
+    text-decoration: none;
 }
 

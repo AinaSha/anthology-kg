@@ -163,6 +163,10 @@
     .btn {
         @include  button;
     }
+
+    .btn a {
+       color: $color-white;
+    }
 }
 
 @media (max-width: 898px) {
@@ -444,7 +448,6 @@
 }
 
 .card {
-    // width: 284px;
     background: #EFEDE9;
     border-radius: 15px;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
@@ -690,7 +693,6 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-        text-decoration: none;
         color: $color-white;
     }
 
@@ -829,7 +831,11 @@
     margin-right: 25px;
 }
 
-@media (max-width: 768px){
+.section-button a {
+   color: $color-white;
+}
+
+@media (max-width: 768px) {
     .section-button {
         font-size: 14px;
         line-height: 17px;
@@ -852,7 +858,7 @@
 //*** section most-read-poem gallery ***//
 
 .popular-poems {
-    background-image: url('../../assets/images/ornament.png');
+    background-image: url('../assets/images/ornament.png');
     background-position: bottom -47% right 53.5%;
     background-repeat: no-repeat;
     background-size: 585px 585px;
@@ -879,8 +885,9 @@
             max-width: 82.65%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 89px;
             margin: 22px 33px 22px 69px;
+            cursor: pointer;
         }
     } 
 
@@ -917,6 +924,7 @@
 
         .gallery-card {
             &__inner {
+                gap: 40px;
                 margin: 22px auto 22px auto;
             }
         } 
@@ -925,6 +933,13 @@
 
 @media (max-width: 1024px) {
     .popular-poems {
+        .gallery-card {
+            &__inner {
+                gap: 30px;
+                margin: 22px auto 22px auto;
+            }
+        } 
+
         .gallery-card img {
             width: 118px;
             height: 118px;
@@ -965,6 +980,7 @@
         .gallery-card {
             &__inner {
                 max-width: 90%;
+                gap: 17px;
             }
         }
     }
@@ -975,7 +991,6 @@
     .popular-poems {
         h2 {
             font-size: 14px;
-            margin: 0  0 53px 0;
         }
 
         .poem-details h4,
