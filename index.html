@@ -12,44 +12,96 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a class="header-logo" href="#">
-                    <img src="./assets/images/logo.png" alt="akbarak-logo" class="header-logo__img">
-                </a>
-                <div class="burger">
-                    <span></span>
-                </div>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item active">
-                            <a class="nav__link active-item" href="#">Акындар</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Ырлар</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Биз жөнүндө</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="header-inner">
+                    <a class="header-logo" href="index.html">
+                        <img src="./assets/images/logo.png" alt="akbarak-logo" class="header-logo__img">
+                    </a>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item active">
+                                <a class="nav__link" href="poets.html">Акындар</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Ырлар</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">КАТЕГОРИЯЛАР</a>
+                                <span class="nav__arrow arrow"></span>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link active">Сүйүү жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жашоо жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Табият жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жаз жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Согуш жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бакыт жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Достук жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Мекен жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Аялдар жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Эне жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Ата жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бала жөнүндө</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Биз жөнүндө</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-btn">
+                        <span></span>
+                        <div class="search-close">
+                            <img src="./assets/icons/search-close.svg" alt="close icon">
+                        </div>
+                    </div>
+                </div>                 
+            </div> 
         </div>
+        <form class="search-form">
+            <div class="container search-form__inner">
+                <input type="text" placeholder="Текстти жазыңыз" value>
+                <img src="./assets/icons/input-search.svg" alt="search icon">
+            </div>
+        </form> 
     </header>
-    <main>
+ <main>
         <section class="topscreen">
             <div class="container topscreen__wrapper">
-                <div class="topscreen-inner">
-                    <form class="search">
-                        <button class="search__btn"><img src="./assets/icons/search1.svg" alt="поиск"></button>
-                        <input class="search__input" type="text" placeholder="">
-                    </form>
+                <div class="topscreen-inner">                  
                     <div class="topscreen-text">
                         <div class="text">
                             <h1  class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. quam auctor. Pellentesque</h1>
                             <p  class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. quam auctor. Pellentesque</p>
                         </div>
-                        <button class="btn">Кененирээк</button>
+                        <button class="btn"><a href="#">Кененирээк</a></button>
                     </div> 
                 </div>   
             </div>
@@ -72,72 +124,72 @@
                         <h2>Эң көп окулган акындар</h2>
                         <div class="slide-content">
                             <div class="card-wrapper swiper-wrapper">
-                                <div class="card swiper-slide">
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/Alykul.png" alt="">
+                                            <img src="./assets/images/Alykul.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Алыкул Осмонов</h4>
                                         <p>1915-1950</p> 
                                     </div> 
-                                </div>
-                                <div class="card swiper-slide">
+                                </a>
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/sarnogoev.png" alt="">
+                                            <img src="./assets/images/sarnogoev.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Байдылда Сарногоев</h4>
                                         <p>1928-1960</p>
                                     </div> 
-                                </div>
-                                <div class="card swiper-slide">
+                                </a>
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/sarnogoev.png" alt="">
+                                            <img src="./assets/images/sarnogoev.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Байдылда Сарногоев</h4>
                                         <p>1928-1960</p>
                                     </div> 
-                                </div>
-                                <div class="card swiper-slide">
+                                </a>
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/sarnogoev.png" alt="">
+                                            <img src="./assets/images/sarnogoev.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Байдылда Сарногоев</h4>
                                         <p>1928-1960</p>
                                     </div> 
-                                </div>
-                                <div class="card swiper-slide">
+                                </a>
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/sarnogoev.png" alt="">
+                                            <img src="./assets/images/sarnogoev.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Байдылда Сарногоев</h4>
                                         <p>1928-1960</p>
                                     </div> 
-                                </div>
-                                <div class="card swiper-slide">
+                                </a>
+                                <a class="card swiper-slide" href="#">
                                     <div class="image-content">
                                         <div class="card-image">
-                                            <img src="./assets/images/sarnogoev.png" alt="">
+                                            <img src="./assets/images/sarnogoev.png" alt="poet">
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <h4>Байдылда Сарногоев</h4>
                                         <p>1928-1960</p>
                                     </div> 
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-button-next swiper-navBtn"></div>
@@ -146,69 +198,23 @@
                     </div>
                 </div> 
             </div>
-        </section>
-        
-        <!-- section category -->
-        <section class="category">
-            <div class="container">
-                <div class="category-inner">
-                    <h2>Категориялар</h2>
-                    <div class="category__group">
-                        <ul class="category__list">
-                            <li class="list-item">
-                                <a class="list-link" href="#">Сүйүү жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Жашоо жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Табият жөнүндө</a>
-                            </li>
-                        </ul>
-                        <ul class="category__list">
-                            <li class="list-item">
-                                <a class="list-link" href="#">Жаз жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Согуш жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Бакыт жөнүндө</a>
-                            </li>
-                        </ul>
-                        <ul class="category__list">
-                            <li class="list-item">
-                                <a class="list-link" href="#">Достук жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Мекен жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Аялдар жөнүндө</a>
-                            </li>
-                        </ul>
-                        <ul class="category__list">
-                            <li class="list-item">
-                                <a class="list-link" href="#">Эне жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Ата жөнүндө</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#">Бала жөнүндө</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section>      
         <!-- section most-read-poem gallery -->
         <section class="popular-poems">
             <div class="container">
                 <div class="popular-poems__inner">
                     <h2>Эң көп окулган ырлар</h2>
                     <div class="popular-poems__gallery">
-                        <div class="gallery-card">
+                        <a class="gallery-card" href="#">
+                            <div class="gallery-card__inner">
+                                    <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Эне тил</h4>
+                                    <p>Алыкул Осмонов</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -216,8 +222,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -225,8 +231,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -234,8 +240,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -243,8 +249,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -252,8 +258,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -261,8 +267,8 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
+                        </a>
+                        <a class="gallery-card" href="#">
                             <div class="gallery-card__inner">
                                     <img src="./assets/images/sarnogoev.png" alt="author-foto">
                                 <div class="poem-details">
@@ -270,23 +276,14 @@
                                     <p>Байдылда Сарногоев</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-card">
-                            <div class="gallery-card__inner">
-                                    <img src="./assets/images/sarnogoev.png" alt="author-foto">
-                                <div class="poem-details">
-                                    <h4>Эне тил</h4>
-                                    <p>Байдылда Сарногоев</p>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                    <button class="section-button">Кененирээк</button>
+                    <button class="section-button"><a href="popular-poems.html">Кененирээк</a></button>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__logo">
@@ -296,7 +293,7 @@
                 </div>
                 <nav class="footer__nav">
                     <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Акындар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="poets.html">Акындар</a></li>
                         <li class="footer__menu-item"><a class="footer__menu-link" href="#">Ырлар</a></li>
                         <li class="footer__menu-item"><a class="footer__menu-link" href="#">Категориялар</a></li>
                         <li class="footer__menu-item"><a class="footer__menu-link" href="#">Биз жөнүндө</a></li>
@@ -324,9 +321,10 @@
                 </div>
             </div>
         </div>  
-    </footer>
+    </footer> --> 
 
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
