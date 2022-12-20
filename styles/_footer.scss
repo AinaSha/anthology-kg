@@ -6,7 +6,7 @@
     background-color: $color-blue;
  
     &__inner {
-        margin: 66px 0 38px 0;
+        margin: 40px 0 38px 0;
     }
 
     &__logo {
@@ -24,7 +24,7 @@
 
     &__nav {
         width: 68%;
-        margin: 53px auto;
+        margin: 35px auto;
     }
 
     &__menu-list {
@@ -37,8 +37,7 @@
 
     &__menu-link {
         font-weight: $fw-semiBold;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 16px;
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
@@ -48,23 +47,27 @@
 
 
 @media (max-width: 768px) {
+
     .footer {
+        
+        &__inner {
+            margin: 20px 0;
+        }
+
+        &__nav {
+            width: 68%;
+            margin: 20px auto;
+        }
+
         &__menu-link {
-            font-size: 14px;
+            font-size: 12px;
             line-height: 17px;
         }
     }
     
 }
 
-@media (max-width: 767.9px){
-    .footer {
-        &__logo {
-            width: 55px;
-            height: 59px;
-        }
-    }
-}
+
 
 @media (max-width: 550px) {
     .footer {
@@ -79,16 +82,15 @@
     
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
     .footer {
         &__logo {
-            width: 34px;
-            height: 35px;
+            width: 60px;
+            height: 33px;
         }
 
         &__menu-link {
-            font-size: 12px;
-            line-height: 14px;
+            font-size: 10px;
         }
 
         &__nav {
@@ -134,13 +136,13 @@
     font-size: 14px;
     line-height: 17px;
     color: $color-light-grey;
-    margin-top: 76px;
+    margin-top: 60px;
 }
 
 @media (max-width: 768px) {
     .copyright {
         font-size: 10px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
 }
 
