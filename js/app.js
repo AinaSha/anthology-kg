@@ -6,18 +6,18 @@ const nav = document.querySelector(".nav"),
   burger = document.querySelector(".burger"),
   navItemPage = document.querySelectorAll(".nav__item-page"),
   navLink = document.querySelectorAll(".nav__link");
-  
+
 burger.addEventListener("click", () => {
   nav.classList.toggle("menu-show");
   document.body.classList.toggle("lock");
   document.querySelector(".burger", ".nav__link").classList.toggle("active");
-
 });
 
 navItemPage.forEach((item) => {
   item.addEventListener("click", (e) => {
     nav.classList.remove("menu-show");
     burger.classList.remove("active");
+    document.body.classList.remove("lock");
   });
 });
 
@@ -70,32 +70,27 @@ if (isMobile.any()) {
     thisNavItem.addEventListener("click", () => {
       subMenu.classList.toggle("open");
     });
-    
-    
   }
 } else {
   body.classList.add("mouse");
 }
 
 //** Search input */
-const searchBtn = document.querySelector('.search-btn span'),
-      searchCloseBtn = document.querySelector('.search-close'),
-      searchInput = document.querySelector('.search-form');
-   
+const searchBtn = document.querySelector(".search-btn span"),
+  searchCloseBtn = document.querySelector(".search-close"),
+  searchInput = document.querySelector(".search-form");
 
-searchBtn.addEventListener('click', () => {
-  searchBtn.classList.add('hide');
-  searchCloseBtn.classList.add('show');
-  searchInput.classList.add('input-show');
+searchBtn.addEventListener("click", () => {
+  searchBtn.classList.add("hide");
+  searchCloseBtn.classList.add("show");
+  searchInput.classList.add("input-show");
 });
 
-searchCloseBtn.addEventListener('click', () => {
-  searchBtn.classList.remove('hide');
-  searchCloseBtn.classList.remove('show');
-  searchInput.classList.remove('input-show');
+searchCloseBtn.addEventListener("click", () => {
+  searchBtn.classList.remove("hide");
+  searchCloseBtn.classList.remove("show");
+  searchInput.classList.remove("input-show");
 });
-
-
 
 // *** Pagination ***//
 
@@ -198,4 +193,3 @@ searchCloseBtn.addEventListener('click', () => {
 //     }
 //   });
 // });
-
