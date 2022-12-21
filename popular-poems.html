@@ -9,37 +9,87 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a class="header-logo" href="index.html">
-                    <img src="./assets/images/logo.png" alt="akbarak-logo" class="header-logo__img">
-                </a>
-                <div class="burger">
-                    <span></span>
-                </div>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a class="nav__link" href="poets.html">Акындар</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Ырлар</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Биз жөнүндө</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="header-inner">
+                    <a class="header-logo" href="index.html">
+                        <img src="./assets/images/logo.png" alt="akbarak-logo" class="header-logo__img">
+                    </a>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item nav__item-page active">
+                                <a class="nav__link" href="poets.html">Акындар</a>
+                            </li>
+                            <li class="nav__item nav__item-page">
+                                <a class="nav__link" href="#">Ырлар</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">КАТЕГОРИЯЛАР</a>
+                                <span class="nav__arrow arrow"></span>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link active">Сүйүү жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жашоо жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Табият жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жаз жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Согуш жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бакыт жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Достук жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Мекен жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Аялдар жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Эне жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Ата жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бала жөнүндө</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item nav__item-page">
+                                <a class="nav__link" href="#">Биз жөнүндө</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-btn">
+                        <span></span>
+                        <div class="search-close">
+                            <img src="./assets/icons/search-close.svg" alt="close icon">
+                        </div>
+                    </div>
+                </div>                 
+            </div> 
         </div>
+        <form class="search-form">
+            <div class="container search-form__inner">
+                <input type="text" placeholder="Текстти жазыңыз" value>
+                <img src="./assets/icons/input-search.svg" alt="search icon">
+            </div>
+        </form> 
     </header>
     <main>
-        <div class="container">
-            <form class="search search-input">
-                <button class="search__btn"><img src="./assets/icons/search1.svg" alt="поиск"></button>
-                <input class="search__input" type="text" placeholder="">
-            </form>
-        </div>
         <section class="popular-poems popular-poems-page">
             <div class="container">
                 <div class="popular-poems__inner">

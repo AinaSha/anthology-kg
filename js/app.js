@@ -4,18 +4,19 @@
 
 const nav = document.querySelector(".nav"),
   burger = document.querySelector(".burger"),
-  navItem = document.querySelectorAll(".nav__item"),
+  navItemPage = document.querySelectorAll(".nav__item-page"),
   navLink = document.querySelectorAll(".nav__link");
-
+  
 burger.addEventListener("click", () => {
   nav.classList.toggle("menu-show");
   document.body.classList.toggle("lock");
   document.querySelector(".burger", ".nav__link").classList.toggle("active");
+
 });
 
-navItem.forEach((item) => {
+navItemPage.forEach((item) => {
   item.addEventListener("click", (e) => {
-    // nav.classList.remove("menu-show");
+    nav.classList.remove("menu-show");
     burger.classList.remove("active");
   });
 });

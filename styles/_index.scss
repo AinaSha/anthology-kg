@@ -623,26 +623,8 @@
     .popular-poems {
         &__gallery {
             grid-template-columns: repeat(1, 1fr);
-            margin: 0 0 34px 0;
-            
-        }
-
-      
-
-        // .gallery-card img {
-        //     width: 60px;
-        //     height: 60px;
-        // }  
-        
-        // .poem-details h4 {
-        //     font-size: 12px;
-        //     margin: 0 0 7px 0;
-        //   }
-
-        // .poem-details p {
-        //     font-size: 10px;
-        //     line-height: 12px;
-        // }
+            margin: 0 0 34px 0;            
+        }     
     }
 }
 
