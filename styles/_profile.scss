@@ -2,7 +2,7 @@
 
 .profile {
     background-color: #F2F3F5;
-    margin: 40px 0;
+    margin: 45px 0;
     background-image: url('../assets/images/ornament.png');
     background-size: 400px 400px;
     background-position: top 50% right 0%;
@@ -177,4 +177,145 @@
         }
     }
     
+}
+
+// **profile gallery**//
+
+.profile-gallery {
+    margin-bottom: 100px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 48.8%  48.8%;
+        gap: 20px;
+        margin-bottom: 100px;
+    }
+
+    &__card:hover {
+        background: #F4F5F6;
+        border-radius: 20px;
+    }
+
+    &__card {
+        padding: 18px 68px;
+    }
+
+    &__card-inner {
+        max-width: 450px;
+    }
+
+    &__card-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 23px;
+    }
+
+    &__card-detail img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .card-detail-text h4 {
+        @include details-title;
+        font-size: 20px;
+        color: #2187ED;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+
+    .card-detail-text p {
+        @include details-title;
+        font-weight: $fw-medium;
+        font-size: 20px;
+        color: #2187ED;
+        text-align: left;
+    }
+
+    .card-detail-poem p {
+        @include details-title;
+        font-weight: $fw-medium;
+        font-size: 20px;
+        color: #004581;
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 1170px) {
+    .profile-gallery {
+        &__card-detail {
+            display: flex;
+            flex-direction: column;
+            row-gap: 23px;
+        }
+
+        .card-detail-text h4,
+        .card-detail-text p {
+           font-size: 18px;
+           text-align: center;
+        }
+
+        .card-detail-poem p {
+            font-size: 18px;
+        }
+    }  
+}
+
+@media (max-width: 768px) {
+    .profile-gallery {
+        margin-bottom: 66px;
+
+        &__wrapper {
+            margin-bottom: 66px;
+        }
+
+        &__card-detail img{
+            width: 118px;
+            height: 118px;
+         }
+
+         &__card {
+            padding: 18px 17px;
+        }
+
+   }
+}
+
+
+@media (max-width: 600px) {
+    .profile-gallery { 
+        margin-bottom: 50px;
+
+        &__wrapper {
+            width: 60%;
+            display: grid;
+            grid-template-columns: auto;
+            gap: 20px;
+            margin: 0 auto 50px auto;
+        }
+
+        .card-detail-text h4,
+        .card-detail-text p {
+           font-size: 14px;
+        }
+
+        .card-detail-text h4 {
+            margin-bottom: 8px;
+        }
+
+        .card-detail-poem p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-gallery { 
+
+        &__wrapper {
+            width: 70%;
+         }
+    }
 }

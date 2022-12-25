@@ -10,11 +10,11 @@
     }
 
     &__gallery {
-        max-width: 916px;
+        // max-width: 916px;
         margin: 0 auto 100px auto;
         display: grid;
-        grid-template-columns: 284px 284px 284px;
-        gap: 30px;
+        grid-template-columns: auto auto auto auto;
+        gap: 40px;
     }
 
     &__gallery .card {
@@ -48,6 +48,8 @@
             width: 460px;
             grid-template-columns: 210px 210px;
             gap:40px;
+            margin-bottom: 66px;
+
         }
 
         h2 {
@@ -74,7 +76,7 @@
 
         .card {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             gap: 21px;
         }

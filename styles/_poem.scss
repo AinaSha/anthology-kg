@@ -1,0 +1,91 @@
+@import './vars';
+
+.poem-block {
+    position: relative;
+    &__inner {
+       width: 80%;
+       margin: 0 auto;
+    }
+
+    h4 {
+        @include section-title;
+        color: $color-blue;
+        text-transform: capitalize;
+    }
+
+    h4:nth-last-child(2) {
+        margin: 28px 0px 50px 0px;
+    }
+
+    pre {
+         @include details-title;
+        font-weight: $fw-regular;
+        color: $color-blue;
+        font-size: 24px;
+        line-height: 40px;
+        text-transform:normal;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        // margin-top: 100px;
+    }
+}
+
+.sticky-block {
+    position: absolute;
+    top: 12%;
+    right: 5%;
+
+    &__comment {
+        margin-bottom: 17px;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .poem-block {
+        h4 {
+            font-size: 22px;
+        }
+
+        pre {
+            font-size: 20px;
+        }
+    }
+
+    .sticky-block {
+        &__comment img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__share img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .poem-block {
+        h4 {
+            font-size: 18px;
+        }
+
+        pre {
+            font-size: 16px;
+        }
+    }
+
+    .sticky-block {
+        &__comment img {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__share img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

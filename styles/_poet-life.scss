@@ -1,0 +1,107 @@
+@import './vars';
+
+.poet-life {
+    position: relative;
+
+    &__inner {
+       width: 80%;
+       margin: 0 auto 100px auto;
+    }
+
+    h4 {
+        @include section-title;
+        color: $color-blue;
+        text-transform: capitalize;
+    }
+
+    h4:nth-last-child(2) {
+        margin: 28px 0px 50px 0px;
+    }
+
+    &__description p {
+         @include details-title;
+        font-weight: $fw-regular;
+        color: $color-blue;
+        font-size: 24px;
+        line-height: 40px;
+        text-transform:normal;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    p + p {
+        margin-top: 30px;
+    }
+}
+
+.sticky-block {
+    position: absolute;
+    top: 12%;
+    transform: translateX(5%);
+
+    &__comment {
+        margin-bottom: 17px;
+    }
+   
+}
+
+
+@media (max-width: 768px) {
+    .poet-life {
+        h4 {
+            font-size: 22px;
+        }
+
+        &__description p {
+            font-size: 20px;
+            line-height: 40px;
+        }
+    }
+
+    .sticky-block {
+        top: 6%;
+
+        &__comment img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__share img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .poet-life {
+        h4 {
+            font-size: 18px;
+        }
+
+        &__description p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        p + p {
+            margin-top: 15px;
+        }
+    }
+
+    .sticky-block {
+        &__comment img {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__share img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+  
+}
