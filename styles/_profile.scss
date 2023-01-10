@@ -19,19 +19,6 @@
         align-items: center;
         justify-content: space-between;
     }
-
-    .profile-img {
-        height: 239px;
-        width: 239px;
-        border-radius: 50%;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
 }
 
 .profile-date {
@@ -96,7 +83,13 @@
             height: 150px;
             width: 150px;
             border-radius: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
+
 
         &__content {
             max-width: 529px;
@@ -150,7 +143,7 @@
         width: 80%;
 
         .poet-profile h4 {
-            font-size: 12px;
+            font-size: 16px;
             margin-bottom: 18px;
         }
 
@@ -197,47 +190,32 @@
     }
 
     &__card {
-        padding: 18px 68px;
+        padding: 39px 68px;
     }
 
-    &__card-inner {
+    &__card-details {
         max-width: 450px;
     }
-
-    &__card-detail {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 23px;
-    }
-
-    &__card-detail img{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-    }
-
-    .card-detail-text h4 {
-        @include details-title;
-        font-size: 20px;
-        color: #2187ED;
-        margin-bottom: 16px;
-        text-align: left;
-    }
-
-    .card-detail-text p {
+  
+    &__card-details h4 {
         @include details-title;
         font-weight: $fw-medium;
-        font-size: 20px;
+        font-size: 22px;
         color: #2187ED;
-        text-align: left;
+        text-align: center;
     }
 
-    .card-detail-poem p {
+    &__card-details .poem-container {
+       text-align: center
+    }
+
+    &__card-details p {
         @include details-title;
-        font-weight: $fw-medium;
-        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
         color: #004581;
+        white-space: pre-line;
+        display: inline-block;
         text-align: left;
     }
 }
@@ -251,15 +229,18 @@
             row-gap: 23px;
         }
 
-        .card-detail-text h4,
-        .card-detail-text p {
-           font-size: 18px;
-           text-align: center;
+        &__card {
+            padding: 59px 0px;
         }
 
-        .card-detail-poem p {
+        &__card-details h4 {
+            font-size: 20px;
+        }
+
+        &__card-details p {
             font-size: 18px;
         }
+
     }  
 }
 
@@ -274,12 +255,11 @@
         &__card-detail img{
             width: 118px;
             height: 118px;
-         }
-
-         &__card {
-            padding: 18px 17px;
         }
 
+        &__card {
+            padding: 18px 17px;
+        }
    }
 }
 
@@ -296,18 +276,27 @@
             margin: 0 auto 50px auto;
         }
 
-        .card-detail-text h4,
-        .card-detail-text p {
-           font-size: 14px;
-        }
-
-        .card-detail-text h4 {
-            margin-bottom: 8px;
-        }
-
-        .card-detail-poem p {
+        &__card-details h4 {
             font-size: 14px;
         }
+
+        &__card-details p {
+            font-size: 12px;
+            line-height: 25px;
+        }
+
+        // .card-detail-text h4,
+        // .card-detail-text p {
+        //    font-size: 14px;
+        // }
+
+        // .card-detail-text h4 {
+        //     margin-bottom: 8px;
+        // }
+
+        // .card-detail-poem p {
+        //     font-size: 14px;
+        // }
     }
 }
 

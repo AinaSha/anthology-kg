@@ -1,7 +1,7 @@
 @import './vars';
-.popular-poems-page {
-    position: relative;
 
+.popular-poems-page {
+     
     &__tracery1 {
         position: absolute;
         top: -50px;
@@ -21,90 +21,7 @@
    margin: 24px auto 0px auto;
 }
 
-// .popular-poems {
-//     h2 {
-//         margin: 73px 0 63px 0;
-//     }
-// }
-
-
- #paginated-list {
-    position: relative;
-}
- 
-
-.hidden {
-    display: none;
-  }
-
-.pagination-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pagination-number{
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-    margin: 0.25rem 0.25rem;
-    cursor: pointer;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    color: $color-blue;
-}
-
-
-.pagination-button {
-    border: none;
-    margin: 0.25rem 0.25rem;
-    cursor: pointer;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background: #D9D9D9;;
-}
-
-.pagination-button img {
-    vertical-align: middle;
-}
-
-.pagination-number.active {
-    color: #fff;
-    background: $color-blue;
-    border-radius: 50%;
-}
-
-
 @media (max-width: 768px) {
-    // .popular-poems {
-    //     h2 {
-    //         font-size: 20px;
-    //         margin: 60px 0 50px 0;
-    //     }
-    // }
-
-    .pagination-number{
-        font-size: 1.3rem;
-        height: 2rem;
-        width: 2rem;
-    }
-    
-    .pagination-button {
-        border: none;
-        margin: 0.25rem 0.25rem;
-        cursor: pointer;
-        height: 2rem;
-        width: 2rem;
-        border-radius: 50%;
-        background: #D9D9D9;;
-    }
-
-    .pagination-button img {
-        height: 19.5px;
-        width: 8.03px;
-    }
 
     .popular-poems-page {
         position: relative;
@@ -130,34 +47,8 @@
 
 
 @media (max-width: 425px) {
-    // .popular-poems {
-    //     h2 {
-    //         margin: 37px 0 22px 0;
-    //     }
-    // }
-  
-    .pagination-number{
-        font-size: 0.8rem;
-    }
-    
-    .pagination-button {
-        border: none;
-        margin: 0.25rem 0.25rem;
-        cursor: pointer;
-        height: 1.5rem;
-        width: 1.5rem;
-        border-radius: 50%;
-        background: #D9D9D9;;
-    }
-
-    .pagination-button img {
-        height: 15.5px;
-        width: 3.43px;
-    }
-
     .popular-poems-page {
-        position: relative;
-    
+ 
         &__tracery1 {
             width: 168px;
             height: 168px;

@@ -3,6 +3,11 @@
 .poet-life {
     position: relative;
 
+    &__wrapper {
+        display: flex;
+
+    }
+
     &__inner {
        width: 80%;
        margin: 0 auto 100px auto;
@@ -36,17 +41,6 @@
     }
 }
 
-.sticky-block {
-    position: absolute;
-    top: 12%;
-    transform: translateX(5%);
-
-    &__comment {
-        margin-bottom: 17px;
-    }
-   
-}
-
 
 @media (max-width: 768px) {
     .poet-life {
@@ -59,49 +53,21 @@
             line-height: 40px;
         }
     }
-
-    .sticky-block {
-        top: 6%;
-
-        &__comment img {
-            width: 50px;
-            height: 50px;
-        }
-
-        &__share img{
-            width: 50px;
-            height: 50px;
-        }
-    }
 }
 
 @media (max-width: 600px) {
     .poet-life {
         h4 {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         &__description p {
-            font-size: 16px;
-            line-height: 30px;
+            font-size: 14px;
+            line-height: 25px;
         }
 
         p + p {
             margin-top: 15px;
         }
     }
-
-    .sticky-block {
-        &__comment img {
-            width: 30px;
-            height: 30px;
-        }
-
-        &__share img{
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-  
 }

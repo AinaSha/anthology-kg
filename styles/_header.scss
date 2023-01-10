@@ -1,4 +1,5 @@
 @import './vars';
+
 header {
     position: sticky;
 }
@@ -22,7 +23,6 @@ header {
     width: 97px;
     height: 52px;
     z-index: 5;
-    // font-size: 0;
     cursor: pointer;
 }
 
@@ -65,10 +65,12 @@ header {
         position: absolute;
         top: 40px;
         padding: 40px 0px 0px 0px; 
-
+       
         li{
             background-color: rgb(0, 69, 129, 0.9);
             padding: 0px 12px;
+            position: relative;
+            z-index: 5;
         }
 
         li:first-child {
@@ -112,7 +114,7 @@ header {
     display: none;
     position: absolute;
     top: 0px;
-    right: 41px;
+    transform: translate(-62px, 0px);
     background-color:  rgba(0, 69, 129, 0.1);
     padding: 28px;
 }
@@ -231,7 +233,7 @@ header {
 
     .search-close {
         top: 0;
-        right: 35px;
+        transform: translate(-54px, 0px);
         background-color:  rgba(0, 69, 129, 0.1);
         padding: 24px;
 
@@ -348,6 +350,7 @@ header {
             position: relative;
             top: 0;
             left: 55px;
+           
              
             li {
                 background-color: transparent;
@@ -433,7 +436,7 @@ header {
 
         .search-close {
             top: 1px;
-            right: 31px;
+            transform: translate(-24px, 0px);
             background-color:  rgba(0, 69, 129, 0.1);
             padding: 11px;
         }
@@ -460,5 +463,13 @@ header {
     .search-form.input-show {
         top: 43px;
     }
+}
 
+
+@media (max-width: 360px) {
+    .search-btn {
+        .search-close {
+            transform: translate(-19px, 0px);
+        }
+    }
 }

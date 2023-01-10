@@ -72,7 +72,7 @@
                             </ul>
                         </li>
                         <li class="nav__item nav__item-page">
-                            <a class="nav__link" href="#">Биз жөнүндө</a>
+                            <a class="nav__link" href="about-us.html">Биз жөнүндө</a>
                         </li>
                     </ul>
                 </nav>
@@ -87,8 +87,8 @@
     </div>
     <form class="search-form">
         <div class="container search-form__inner">
-            <input type="text" placeholder="Текстти жазыңыз" value>
-            <img src="./assets/icons/input-search.svg" alt="search icon">
+            <input  id="text-input" type="text" placeholder="Текстти жазыңыз" value>
+            <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
         </div>
     </form> 
 </header>
@@ -117,6 +117,7 @@
                         <p>Ырыма бир мертебе калп айта албайм.</p>
                     </div>
                     <p class="poem__author">Алыкул Осмонов</p>
+                    <div class="tracery"></div>
                 </div>
             </div>
         </section> 
@@ -125,6 +126,7 @@
             <div class="container">
                 <div class="slide">
                      <h2>Эң көп окулган акындар</h2>
+                     <div class="slide__tracery"></div>
                     <div class="slide__inner swiper">
                         <div class="slide-content">
                             <div class="card-wrapper swiper-wrapper">
@@ -283,7 +285,10 @@
                             </div>
                         </a>
                     </div>
-                    <button class="section-button"><a href="popular-poems.html">Кененирээк</a></button>
+                    <button class="section-button">
+                        <a href="popular-poems.html">Кененирээк</a>
+                        <span class="popular-poems__tracery"></span>
+                    </button>
                 </div>
             </div>
         </section>

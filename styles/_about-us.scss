@@ -1,0 +1,83 @@
+@import './vars';
+
+.about {
+    &__inner {
+       width: 91%;
+       margin: 100px auto 0px auto;
+    }
+
+   h2 {
+    @include section-title;
+    color: $color-blue;
+    margin-bottom: 68px;
+    position: relative;
+   }
+
+   &__descrip {
+    margin-bottom: 250px;
+      p {
+        @include details-title;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: left;
+        line-height: 35px;
+    }
+
+    p + p {
+        margin-top: 30px;
+    }
+   }
+
+   &__tracery {
+        content: url('../assets/icons/half-tracery.svg');
+        position: relative;
+        top: 0px;
+        width: 489px;
+        margin: 0 auto;
+   }
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        
+        h2 {
+            font-size: 18px;
+            margin-bottom: 49px;
+        }
+
+        &__descrip p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        p + p {
+            margin-top: 25px;
+        }
+    }
+}
+
+
+@media (max-width: 425px) {
+    .about {
+        &__inner {
+            margin: 50px 20px 350px 20px;
+         }
+        
+        h2 {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        &__descrip p {
+            font-size: 12px;
+            line-height: 25px;
+        }
+
+        p + p {
+            margin-top: 20px;
+        }
+    }
+
+
+}

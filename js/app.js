@@ -1,6 +1,6 @@
 "use strict";
 
-// *** Burger ***//
+// ******* Burger ***//
 
 const nav = document.querySelector(".nav"),
   burger = document.querySelector(".burger"),
@@ -21,7 +21,7 @@ navItemPage.forEach((item) => {
   });
 });
 
-//** drop-down menu */
+//******* drop-down menu */
 
 const isMobile = {
   Android: function () {
@@ -75,121 +75,66 @@ if (isMobile.any()) {
   body.classList.add("mouse");
 }
 
-//** Search input */
-const searchBtn = document.querySelector(".search-btn span"),
-  searchCloseBtn = document.querySelector(".search-close"),
-  searchInput = document.querySelector(".search-form");
+//****** Search input */
 
-searchBtn.addEventListener("click", () => {
-  searchBtn.classList.add("hide");
-  searchCloseBtn.classList.add("show");
-  searchInput.classList.add("input-show");
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.querySelector(".search-btn span"),
+    searchCloseBtn = document.querySelector(".search-close"),
+    searchForm = document.querySelector(".search-form"),
+    searchInputBtn = searchForm.querySelector("#search-btn"),
+    searchFormInput = document.getElementById("text-input"),
+    searchOutput = document.getElementById("text-output"),
+    notFindText = document.querySelector(".not-find");
+
+  console.log(searchFormInput);
+  console.log(searchOutput);
+  console.log(notFindText);
+
+  const showSearchForm = function () {
+    searchBtn.classList.add("hide");
+    searchCloseBtn.classList.add("show");
+    searchForm.classList.add("input-show");
+  };
+
+  const closeSearchForm = function () {
+    searchBtn.classList.remove("hide");
+    searchCloseBtn.classList.remove("show");
+    searchForm.classList.remove("input-show");
+  };
+
+  searchBtn.addEventListener("click", showSearchForm);
+  searchCloseBtn.addEventListener("click", closeSearchForm);
+
+  const redirectSearchResult = function() {
+    if (window.location.href !== "http://127.0.0.1:5501/search-result.html") {
+      window.location.href =
+        "http://127.0.0.1:5501/search-result.html";
+    }
+  };
+
+  const pushSearchResult = function() {
+    console.log("hello");
+    if (searchFormInput.value === "") {
+      searchOutput.placeholder = "Издөө терминин киргизиңиз";
+      notFindText.classList.add("open");
+      document.querySelector(".search-result__input img").classList.add("hide");
+    } else {
+      searchOutput.value = searchFormInput.value;
+      searchFormInput.value = "";
+    }
+  };
+
+  // searchInputBtn.addEventListener("click", redirectSearchResult);
+  searchInputBtn.addEventListener("click", () => {
+    redirectSearchResult();
+    setTimeout(pushSearchResult(), 1000);
+  });
 });
 
-searchCloseBtn.addEventListener("click", () => {
-  searchBtn.classList.remove("hide");
-  searchCloseBtn.classList.remove("show");
-  searchInput.classList.remove("input-show");
-});
 
-// *** Pagination ***//
 
-const paginationNumbers = document.getElementById("pagination-numbers");
-const paginatedList = document.getElementById("paginated-list");
-const listItems = document.querySelectorAll(".paginated-card");
-const nextButton = document.getElementById("next-button");
-const prevButton = document.getElementById("prev-button");
-
-const paginationLimit = 12;
-const pageCount = Math.ceil(listItems.length / paginationLimit);
-let currentPage = 1;
-
-const disableButton = (button) => {
-  button.classList.add("disabled");
-  button.setAttribute("disabled", true);
-};
-
-const enableButton = (button) => {
-  button.classList.remove("disabled");
-  button.removeAttribute("disabled");
-};
-
-const handlePageButtonsStatus = () => {
-  if (currentPage === 1) {
-    disableButton(prevButton);
-  } else {
-    enableButton(prevButton);
+searchFormInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    searchInputBtn.click();
   }
-
-  if (pageCount === currentPage) {
-    disableButton(nextButton);
-  } else {
-    enableButton(nextButton);
-  }
-};
-
-const handleActivePageNumber = () => {
-  document.querySelectorAll(".pagination-number").forEach((button) => {
-    button.classList.remove("active");
-    const pageIndex = Number(button.getAttribute("page-index"));
-    if (pageIndex == currentPage) {
-      button.classList.add("active");
-    }
-  });
-};
-
-const appendPageNumber = (index) => {
-  const pageNumber = document.createElement("button");
-  pageNumber.className = "pagination-number";
-  pageNumber.innerHTML = index;
-  pageNumber.setAttribute("page-index", index);
-  pageNumber.setAttribute("aria-label", "Page " + index);
-
-  paginationNumbers.append(pageNumber);
-};
-
-const getPaginationNumbers = () => {
-  for (let i = 1; i <= pageCount; i++) {
-    appendPageNumber(i);
-  }
-};
-
-const setCurrentPage = (pageNum) => {
-  currentPage = pageNum;
-
-  handleActivePageNumber();
-  handlePageButtonsStatus();
-
-  const prevRange = (pageNum - 1) * paginationLimit;
-  const currRange = pageNum * paginationLimit;
-
-  listItems.forEach((item, index) => {
-    item.classList.add("hidden");
-    if (index >= prevRange && index < currRange) {
-      item.classList.remove("hidden");
-    }
-  });
-};
-
-window.addEventListener("load", () => {
-  getPaginationNumbers();
-  setCurrentPage(1);
-
-  prevButton.addEventListener("click", () => {
-    setCurrentPage(currentPage - 1);
-  });
-
-  nextButton.addEventListener("click", () => {
-    setCurrentPage(currentPage + 1);
-  });
-
-  document.querySelectorAll(".pagination-number").forEach((button) => {
-    const pageIndex = Number(button.getAttribute("page-index"));
-
-    if (pageIndex) {
-      button.addEventListener("click", () => {
-        setCurrentPage(pageIndex);
-      });
-    }
-  });
 });

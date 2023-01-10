@@ -173,11 +173,6 @@
 //***  poem section ***//
 
 .poem {
-    position: relative;
-    background-image: url('../assets/images/ornament.png');
-    background-position: top 15% right 17%;
-    background-repeat: no-repeat;
-    
     .poem-inner {
         width: 590px;
         margin: 134px auto 100px auto;
@@ -195,9 +190,20 @@
     }
 
     &__line p {
+        position: relative;
         width: 498px;
         margin: 0 auto;
     }
+
+    .tracery{
+        content: url('../assets/icons/poem-line-ornament.svg');
+        position: absolute;
+        top: 800px;
+        transform: translate(550px, 0px); 
+        width: 316px;
+        height: 316px;
+    }
+
 
     &__author {
         text-align: right;
@@ -205,11 +211,29 @@
     }
 }
 
+@media (max-width: 1170px) {
+    .poem {
+        .tracery {
+            top: 800px;
+            transform: translate(550px, 0px); 
+            width: 235px;
+            height: 235px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .poem {
+        .tracery {
+            top: 800px;
+            transform: translate(420px, 0px); 
+        }
+    }
+}
+
 @media (max-width: 768px){
     .poem {
-         background-size: 300px 300px;
-         background-position: top -5% right 5%;
-
+       
         .poem-inner {
             width: 296px;
             margin: 89px auto 40px auto;
@@ -225,15 +249,25 @@
             width: 291px;
             margin: 0 auto;
         }
+
+        .tracery {
+            top: 614px;
+            transform: translate(280px, 0px); 
+            width: 150px;
+            height: 150px;
+        }
     
     }   
 }
 
+@media (max-width: 600px) {
+    .tracery {
+        display: none;
+    }
+}
+
 @media (max-width: 425px) {
     .poem {
-        background-size: 150px 150px;
-        background-position: top 5% right 5%;
-
 
         .poem-inner {
             width: 260px;
@@ -254,15 +288,6 @@
     }
 }
 
-@media (max-width: 320px) {
-    .poem {
-        background-size: 107px 107px;
-        background-position: top 15% right 5%;
-    
-    }
-}
-
-
 // ** slide-block
 
 .slide {
@@ -273,16 +298,22 @@
     background: #EFEDE9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    background-image: url('../assets/images/ornament.png');
-    background-position: top -40% left -40%;
-    background-repeat: no-repeat;
     padding: 30px 0px 80px 0px;
 
     &__inner {
         width: 100%;
-        margin: 0px auto;
-      
+        margin: 0px auto; 
     }
+
+    &__tracery {
+        content: url('../assets/icons/half-tracery.svg');
+        position: absolute;
+        rotate: (90deg);
+        top: 1315px;
+        transform: translate(0px, 64px);
+        width: 250px;
+    }
+
 }
  
 .slide-content {
@@ -305,8 +336,6 @@
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-
-
 .image-content,
 .card-content {
   display: flex;
@@ -317,7 +346,6 @@
 .image-content {
     padding: 22px 0 25px 0;
 }
-
 
 .card-image {
     height: 150px;
@@ -390,20 +418,36 @@
 }
 
 
+@media (max-width: 840px) {
+    .slide{
+        &__tracery {
+            top: 1360px;
+            transform: translate(0px, 64px);
+        } 
+    } 
+}
 
-  @media (max-width: 768px){
-    .slide {
-        max-width: 650px;
-        width: 100%;
-        background-size: 300px 300px;
-        background-position: top -73% left -20%;
 
-        &__inner {
-            width: 95%;
-            margin: 0px auto;
-        }
 
+@media (max-width: 768px){
+.slide {
+    max-width: 650px;
+    width: 100%;
+    background-size: 300px 300px;
+    background-position: top -73% left -20%;
+
+    &__inner {
+        width: 95%;
+        margin: 0px auto;
     }
+
+    &__tracery {
+        rotate: (180deg);
+        top: 953px;
+        transform: translate(-20px, 64px);
+    } 
+
+}
 
     .slide-content {
         margin: 0 32px;
@@ -437,89 +481,88 @@
 
     .swiper-button-next.swiper-navBtn:after,
     .swiper-button-prev.swiper-navBtn:after {
-      font-size: 20px!important;
+        font-size: 20px!important;
     }
 
     .swiper-pagination.swiper-pagination-bullets.slide-pag {
         bottom: 0px!important;
     }
-  }
+}
 
-  @media (max-width: 760px) {
-    .slide {
-        background-image: none;
+@media (max-width: 760px) {
+.slide {
+    background-image: none;
 
-        max-width: 350px;
-        &__inner {
-            width: 90%;
-            margin: 0px auto;
-          
-        }
+    max-width: 350px;
+    &__inner {
+        width: 90%;
+        margin: 0px auto;
+        
     }
 
-   
-  }
+    &__tracery {
+        display: none;
+    } 
+}
 
 
- @media (max-width: 426px) {
-    .slide {
-        max-width: 300px;
-        width: 100%;
-        margin: 50px auto;
-        padding: 30px 0px 30px 0px;
-    }
+}
 
-    .slide h2 {
-        font-size: 14px;
-        padding: 20px 0;
-    }
 
-    .slide-content {
-        padding: 10px 5px 42px 5px;
-    }
+@media (max-width: 426px) {
+.slide {
+    max-width: 300px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px 0px 30px 0px;
+}
 
-    .card-image {
-        height: 80px;
-        width: 80px;
-    }
+.slide h2 {
+    font-size: 14px;
+    padding: 20px 0;
+}
 
-    .image-content {
-        padding: 28px 0 12px 0;
-    }
+.slide-content {
+    padding: 10px 5px 42px 5px;
+}
 
-    .card-content {
-        row-gap: 24px;
-        padding: 12px 0 42px 0;
-    }
+.card-image {
+    height: 80px;
+    width: 80px;
+}
 
-    .card-content h4 ,
-    .card-content p {
-        font-size: 12px;
-    }
+.image-content {
+    padding: 28px 0 12px 0;
+}
 
-    .swiper-pagination.swiper-pagination-bullets.slide-pag {
-        bottom: 20px!important;
-    }
-  }
+.card-content {
+    row-gap: 24px;
+    padding: 12px 0 42px 0;
+}
 
-  @media (max-width: 350px) {
-    .slide {
-       &__inner {
-        width: 100%;
-       } 
-    
-    }
-  }
+.card-content h4 ,
+.card-content p {
+    font-size: 12px;
+}
+
+.swiper-pagination.swiper-pagination-bullets.slide-pag {
+    bottom: 20px!important;
+}
+}
+
+@media (max-width: 350px) {
+.slide {
+    &__inner {
+    width: 100%;
+    } 
+
+}
+}
 
 
 //*** section most-read-poem gallery ***//
 
 .popular-poems {
-    background-image: url('../assets/images/ornament.png');
-    background-position: bottom -47% right 53.5%;
-    background-repeat: no-repeat;
-    background-size: 585px 585px;
-
     h2 {
         @include section-title;
         color: $color-blue;
@@ -528,6 +571,7 @@
 
     &__inner {
         margin: 100px 0 122px 0;
+      
     }
 
     &__gallery {
@@ -540,7 +584,6 @@
     .gallery-card {
         &__inner {
             max-width: 366px;
-            // max-width: 82.65%;
             display: flex;
             align-items: center;
             gap: 46px;
@@ -553,6 +596,8 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
+        position: relative;
+        z-index: -1;
     }
 
     .poem-details h4,
@@ -571,8 +616,19 @@
         font-size: 16px;
         color: rgba(0, 0, 0, 0.65);
     }
-    
+
+    &__inner .section-button {
+        position: relative;
+    }
+
+    &__tracery {
+        content: url('../assets/icons/half-tracery.svg');
+        position: absolute;
+        top: -65px;
+        transform: translate(-308px, 0px);
+    }
 }
+
 
 
 @media (max-width: 768px) {
@@ -615,16 +671,31 @@
             height: 118px;
         }
 
+        &__tracery {
+            width: 300px;
+            top: 20px;
+            transform: translate(-196px, 0px);
+        }
+
     }
 
 }
 
 @media (max-width: 660px) {
     .popular-poems {
+        &__inner {
+            margin: 80px 0 71px 0;
+        }
+
         &__gallery {
             grid-template-columns: repeat(1, 1fr);
-            margin: 0 0 34px 0;            
-        }     
+            margin: 0 0 60px 0;            
+        } 
+        
+        &__tracery {
+            display: none;
+        }
+
     }
 }
 
@@ -662,7 +733,6 @@
             font-size: 10px;
             line-height: 12px;
         }
-
 
     }
 }

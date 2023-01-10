@@ -88,109 +88,54 @@
                 <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
             </div>
         </form> 
-    </header>
+    </header>  
     <main>
-        <section class="profile">
-            <div class="container">
-                <div class="profile__inner">
-                    <div class="profile__content">
-                        <div class="profile-img">
-                            <img src="./assets/images/sarnogoev.png" alt="akyn">
-                        </div>
-                        <div class="profile-date">
-                            <div class="poet-profile">
-                                <h4>Байдылда Сарногоев</h4>
-                                <p>1928-1960</p>
-                            </div>
-                            <div class="profile-btn">
-                                <button class="profile-btn1"><a href="#">Өмүр баяны</a></button>
-                                <button class="profile-btn2"><a href="#">Ырлары</a></button> 
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-       </section> 
-       <section class="poem-block">
-            <div class="container">
-                <div class="poem-block__wrapper">
-                    <div class="poem-block__inner">
-                        <h4> Кош, Мидин!</h4>
-                       <pre>
-                        Каралуу кылып жеңемди 
-                        Калтырып жетим Медерди,
-                        Кай жакка кеттиң, Мидике,
-                        Кайгыртып тууган көп элди.
-                        
-                        Аяйбыз ичтен сызыла 
-                        Алп талант элен нукура. 
-                        Ажырап калдык заматта 
-                        Айла жок... тагдыр ушу да. 
-                        
-                        Көп сырың кетти ачылбай, 
-                        Көп ырың кетти жазылбай. 
-                        Кыйды экен кантип куу өлүм
-                        Кырк бештен жашың ашырбай. 
-                        
-                        Кайрылып сынды кош мүрүң,
-                        Калк сүйгөн тилиң жок бүгүн. 
-                        Какшасак дагы келбессиң
-                        Кантелик эми, кош, Мидин! 
-                        1959-ж.
-                       </pre>
-                    </div>
-                    <div class="sticky-block">
-                        <div class="sticky-block__comment">
-                            <img src="./assets/icons/comment-icon.svg" alt="comment icon">
-                        </div>
-                        <div class="sticky-block__share">
-                            <img src="./assets/icons/share-icon.svg" alt="share icon">
-                        </div>
-                    </div>
-                </div>
-            </div>
-       </section> 
-    </main>
-    <footer class="footer">
         <div class="container">
-            <div class="footer__inner">
-                <div class="footer__logo">
-                    <a class="footer_logo-link" href="#" >
-                        <img src="./assets/images/logo.png" alt="logotype" class="footer__logo-img">
-                    </a>
+            <form class="search-result">
+                <label for="">Издөө жыйынтыгы:</label>
+                <div class="search-result__input">
+                    <input id="text-output" type="text" value>
+                    <img src="./assets/icons/search-close.svg" alt="close icon">
                 </div>
-                <nav class="footer__nav">
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="poets.html">Акындар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="popular-poems.html">Ырлар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Категориялар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Биз жөнүндө</a></li>
-                    </ul>
-                </nav>
-                <ul class="social-menu">
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/facebook.svg" alt="facebook">
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/instagramm.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/mail.svg" alt="mail">
-                        </a>  
-                    </li>             
-                </ul>
-                <div class="copyright">
-                    <p><span>&copy;</span> Copyright “Ак барак”.  Баардык укуктар корголгон</p>
+            </form>
+            <div class="not-find">
+                <p>СУРООҢУЗ боюнча ЭЧ НЕРСЕ ТАБЫЛГАН жок</p>
+            </div>
+            <div class="search-result__date">
+                <div class="tab-wrapper">
+                    <div class="search-list">
+                        <ul>
+                            <li class="search-list__item">
+                                <h5>Aта журтум</h5>
+                                <p>...Ата Журтум, тууган элим, Мекеним...</p>
+                                <h6>Алыкул Осмонов</h6>
+                            </li>
+                            <li class="search-list__item">
+                                <h5>АТА-ЖУРТКА ЖОЛУГУУ</h5>
+                                <p>...Кейибей тур кулунуңа, Ата-Журт...</p>
+                                <h6>Зайырбек Ажыматов</h6>
+                            </li>
+                            <li class="search-list__item">
+                                <h5>АТАСЫ КУБАНДЫ </h5>
+                                <p>...Ата Журтум, тууган элим, Мекеним...</p>
+                                <h6>Алыкул Осмонов</h6>
+                            </li>
+                            <li class="search-list__item">
+                                <h5>АТА-ЖУРТКА ЖОЛУГУУ</h5>
+                                <p>...Кейибей тур кулунуңа, Ата-Журт...</p>
+                                <h6>Зайырбек Ажыматов</h6>
+                            </li>
+                            <li class="search-list__item">
+                                <h5>АТАСЫ КУБАНДЫ </h5>
+                                <p>...Ата Журтум, тууган элим, Мекеним...</p>
+                                <h6>Алыкул Осмонов</h6>
+                            </li class="search-list__item">
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>  
-    </footer> 
-
+        </div>
+    </main> 
     <script src="./js/app.js"></script>
 </body>
 </html>

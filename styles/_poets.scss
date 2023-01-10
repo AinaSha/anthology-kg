@@ -6,7 +6,7 @@
     &__inner h2 {
         @include section-title;
         color: $color-blue;
-        margin: 73px  0 62px 0;
+        margin: 100px  0 62px 0;
     }
 
     &__gallery {
@@ -22,6 +22,8 @@
         background-color: #fff;
         cursor: pointer;
         transition: all 0.3s ease;
+        position: relative;
+        z-index: -1;
     }
 
     .card:hover {

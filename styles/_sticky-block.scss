@@ -1,0 +1,38 @@
+@import './vars';
+
+.sticky-block {
+    margin-top: 110px;
+
+    &__comment {
+        margin-bottom: 17px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }  
+}
+
+@media (max-width: 768px) {
+    .sticky-block {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sticky-block {
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__comment {
+            margin-bottom: 10px;
+        }
+    }
+
+ 
+}

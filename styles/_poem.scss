@@ -2,6 +2,11 @@
 
 .poem-block {
     position: relative;
+
+    &__wrapper {
+        display: flex;
+    }
+
     &__inner {
        width: 80%;
        margin: 0 auto;
@@ -31,16 +36,7 @@
     }
 }
 
-.sticky-block {
-    position: absolute;
-    top: 12%;
-    right: 5%;
 
-    &__comment {
-        margin-bottom: 17px;
-    }
-   
-}
 
 @media (max-width: 768px) {
     .poem-block {
@@ -53,39 +49,18 @@
         }
     }
 
-    .sticky-block {
-        &__comment img {
-            width: 50px;
-            height: 50px;
-        }
-
-        &__share img{
-            width: 50px;
-            height: 50px;
-        }
-    }
 }
 
 @media (max-width: 600px) {
     .poem-block {
         h4 {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         pre {
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 30px;
         }
     }
 
-    .sticky-block {
-        &__comment img {
-            width: 30px;
-            height: 30px;
-        }
-
-        &__share img{
-            width: 30px;
-            height: 30px;
-        }
-    }
 }
