@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInputBtn = searchForm.querySelector("#search-btn"),
     searchFormInput = document.getElementById("text-input"),
     searchOutput = document.getElementById("text-output"),
-    notFindText = document.querySelector(".not-find");
+    notFindText = document.querySelector(".not-find"),
+    searchClearIcon = document.querySelector(".search-result__input img"),
+    searchResults = document.querySelector("search-result__date");
 
-  console.log(searchFormInput);
-  console.log(searchOutput);
-  console.log(notFindText);
+
 
   const showSearchForm = function () {
     searchBtn.classList.add("hide");
@@ -113,28 +113,59 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const pushSearchResult = function() {
-    console.log("hello");
     if (searchFormInput.value === "") {
+      searchCloseBtn.click();
       searchOutput.placeholder = "Издөө терминин киргизиңиз";
       notFindText.classList.add("open");
-      document.querySelector(".search-result__input img").classList.add("hide");
+      searchClearIcon.classList.add("hide");
+      searchResults.classList.add('hide');
+      
     } else {
-      searchOutput.value = searchFormInput.value;
+      searchCloseBtn.click();
+      searchOutput.value = searchFormInput.value.toUpperCase();
       searchFormInput.value = "";
+      notFindText.classList.remove("open");
+      searchResults.classList.remove('hide');
     }
   };
 
-  // searchInputBtn.addEventListener("click", redirectSearchResult);
+  const focusSearchOutput = function() {
+    searchOutput.placeholder = "Текстти жазыңыз";
+    searchClearIcon.classList.remove("hide");
+  };
+  
+  searchOutput.addEventListener("keypress", (event) => {    
+    // event.preventDefault();
+    if (event.key === "Enter") {
+      console.log(1);
+      console.log(event)
+      notFindText.classList.remove("open");
+      searchResults.classList.remove('hide');
+    }
+
+  });
+
   searchInputBtn.addEventListener("click", () => {
     redirectSearchResult();
     setTimeout(pushSearchResult(), 1000);
   });
+
+  searchClearIcon.addEventListener('click' , () => {
+    if(searchOutput.value !== ''){
+      searchOutput.value = "";
+    }
+  });
+
+
+  searchOutput.addEventListener("focus", focusSearchOutput);
 });
 
+// searchFormInput.addEventListener("keyup", (event) => {
+//   if (event.key === "Enter") {
+//     searchInputBtn.click();
+//   }
+// });
 
 
-searchFormInput.addEventListener("keyup", (event) => {
-  if (event.key === "Enter") {
-    searchInputBtn.click();
-  }
-});
+
+
