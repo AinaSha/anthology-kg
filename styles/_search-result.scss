@@ -36,7 +36,8 @@
     }
 
     &__date {
-      display: none;
+        margin-bottom: 100px;
+    //   display: none;
     }
 }
 
@@ -54,9 +55,45 @@
     font-weight: 500;
 }
 
+
+
+.tab-btns {
+    margin-bottom: 48px;
+
+    .tab-btn {
+        @include details-title;
+        font-size: 20px;
+        width: 210px;
+        height: 54px;
+        border: 1px solid #D9D9D9;
+        border-radius: 15px;
+        background-color: transparent;
+    }
+
+    .tab-btn + .tab-btn {
+        margin-left: 77px;
+    } 
+
+    .tab-btn.active {
+        background-color:  #D9D9D9;
+    }
+}
+
+.show {
+    display: block;
+}
+  
+.hide {
+    display: none;
+}
+
 .search-list {
     width: 93%;
     margin: 0 auto;
+
+    ul {
+        margin-bottom: 80px;
+    }
 
     &__item {
         width: 40%;

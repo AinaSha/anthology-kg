@@ -84,7 +84,7 @@
         </div>
         <form class="search-form">
             <div class="container search-form__inner">
-                <input id="text-input" type="text" placeholder="Текстти жазыңыз" value>
+                <input id="text-input" type="search" placeholder="Текстти жазыңыз" value>
                 <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
             </div>
         </form> 
@@ -144,7 +144,35 @@
                             <img src="./assets/icons/comment-icon.svg" alt="comment icon">
                         </div>
                         <div class="sticky-block__share">
-                            <img src="./assets/icons/share-icon.svg" alt="share icon">
+                            <img data-modal src="./assets/icons/share-icon.svg" alt="share icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal">
+                    <div class="modal__dialog">
+                        <div class="modal__content">
+                            <div class="share">
+                                <p>Бөлүшүү</p>
+                                <img data-close src="./assets/icons/modal-close.svg" alt="close-icon">
+                            </div>
+                            <div class="social-media-block">
+                                <a href="#" class="facebook-btn">
+                                    <img src="./assets/images/facebook.png" alt="facebook icon">
+                                </a>
+                                <a href="#" class="whatsapp-btn">
+                                    <img src="./assets/images/whatsapp.png" alt="whatsapp icon">
+                                </a>
+                                <a href="#" class="telegram-btn">
+                                    <img src="./assets/images/Telegram_logo.svg.webp" alt="telegram icon">
+                                </a>
+                            </div>
+                            <div class="share-site-link">
+                                <input id="link-input" type="text" value>
+                                <img id="share-link-btn" src="./assets/icons/copy-icon.svg" alt="copy icon">
+                            </div>
+                            <div class="copy-popup">
+                                <p>Kөчүрүлдү!</p>
+                            </div>
                         </div>
                     </div>
                 </div>

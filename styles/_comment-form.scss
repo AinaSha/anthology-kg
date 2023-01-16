@@ -1,0 +1,119 @@
+@import './vars';
+
+.comment {
+
+    &__wrapper {
+        margin: 40px 0;
+        padding-left: 20px;
+    }
+    
+    &__form {
+        width: 80%;
+    }
+   
+    &__name {
+        width: 50%;
+        height: 40px;
+        font-family: 'Bitter';
+        // @include details-title;
+        // font-weight: $fw-regular;
+        // font-size: 14px;
+        text-align: left;
+        padding: 0 10px;
+        border: 0.935156px solid rgba(0, 69, 129, 0.35);
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__body {
+        margin: 21px 0;
+        width: 100%;
+        padding: 10px;
+        font-family: 'Bitter';
+        // @include details-title;
+        // font-weight: $fw-regular;
+        // font-size: 16px;
+        // color: #000;
+        border: 0.935156px solid rgba(0, 69, 129, 0.35);
+        text-align: left;
+        resize: none;
+
+        &::placeholder {
+            font-family: 'Bitter';
+            // font-weight: $fw-regular;
+            // font-size: 16px;
+            // text-align: left;
+            // padding: 10px 0 0 10px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__submit {
+        display: block;
+        margin-left: auto;
+        @include details-title;
+        font-size: 16px;
+        color: #fff;
+        padding: 14px 41px;
+        background-color: $color-orange;
+        border-radius: 8px;
+        border: transparent;
+    }
+
+    &__counter {
+        @include details-title;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(0, 69, 129, 0.55);
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        border: 1px solid #F8A324;
+    }
+
+    &__field {
+        margin: 30px 0px 0px 0px;
+        padding-left: 25px;
+
+    }
+
+    &__field-name {
+        @include details-title;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    &__field-body {
+        @include details-title;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: left;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .feedback-group {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            font-family: 'Bitter';
+            font-size: 12px;
+            color: $color-blue;
+        }
+
+        .like-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

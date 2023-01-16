@@ -14,7 +14,8 @@
    }
 
    &__descrip {
-    margin-bottom: 250px;
+        margin-bottom: 250px;
+
       p {
         @include details-title;
         font-weight: 400;
@@ -65,12 +66,12 @@
          }
         
         h2 {
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 25px;
         }
 
         &__descrip p {
-            font-size: 12px;
+            font-size: 14px;
             line-height: 25px;
         }
 

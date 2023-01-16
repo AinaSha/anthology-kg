@@ -16,7 +16,7 @@
     h4 {
         @include section-title;
         color: $color-blue;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     h4:nth-last-child(2) {
@@ -27,7 +27,7 @@
          @include details-title;
         font-weight: $fw-regular;
         color: $color-blue;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 40px;
         text-transform:normal;
         text-align: left;
@@ -45,11 +45,11 @@
 @media (max-width: 768px) {
     .poet-life {
         h4 {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         &__description p {
-            font-size: 20px;
+            font-size: 16px;
             line-height: 40px;
         }
     }

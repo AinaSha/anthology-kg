@@ -1,5 +1,7 @@
 "use strict";
 
+window.addEventListener("DOMContentLoaded", () => {
+
 // ******* Burger ***//
 
 const nav = document.querySelector(".nav"),
@@ -20,6 +22,7 @@ navItemPage.forEach((item) => {
     document.body.classList.remove("lock");
   });
 });
+
 
 //******* drop-down menu */
 
@@ -75,20 +78,11 @@ if (isMobile.any()) {
   body.classList.add("mouse");
 }
 
-//****** Search input */
 
-document.addEventListener("DOMContentLoaded", () => {
+//****** Search input */
   const searchBtn = document.querySelector(".search-btn span"),
     searchCloseBtn = document.querySelector(".search-close"),
-    searchForm = document.querySelector(".search-form"),
-    searchInputBtn = searchForm.querySelector("#search-btn"),
-    searchFormInput = document.getElementById("text-input"),
-    searchOutput = document.getElementById("text-output"),
-    notFindText = document.querySelector(".not-find"),
-    searchClearIcon = document.querySelector(".search-result__input img"),
-    searchResults = document.querySelector("search-result__date");
-
-
+    searchForm = document.querySelector(".search-form");
 
   const showSearchForm = function () {
     searchBtn.classList.add("hide");
@@ -105,66 +99,75 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBtn.addEventListener("click", showSearchForm);
   searchCloseBtn.addEventListener("click", closeSearchForm);
 
-  const redirectSearchResult = function() {
-    if (window.location.href !== "http://127.0.0.1:5501/search-result.html") {
-      window.location.href =
-        "http://127.0.0.1:5501/search-result.html";
-    }
-  };
 
-  const pushSearchResult = function() {
-    if (searchFormInput.value === "") {
-      searchCloseBtn.click();
-      searchOutput.placeholder = "Издөө терминин киргизиңиз";
-      notFindText.classList.add("open");
-      searchClearIcon.classList.add("hide");
-      searchResults.classList.add('hide');
-      
-    } else {
-      searchCloseBtn.click();
-      searchOutput.value = searchFormInput.value.toUpperCase();
-      searchFormInput.value = "";
-      notFindText.classList.remove("open");
-      searchResults.classList.remove('hide');
-    }
-  };
+  // *** Modal**//
+  const modalTrigger = document.querySelector('[data-modal]'),
+        modal = document.querySelector('.modal'),
+        modalCloseBtn = document.querySelector('[data-close]');
+        console.log(modalCloseBtn);
+  function closeModal() {
+    modal.classList.toggle('show');
+    document.body.style.overflow = '';
+  }
 
-  const focusSearchOutput = function() {
-    searchOutput.placeholder = "Текстти жазыңыз";
-    searchClearIcon.classList.remove("hide");
-  };
-  
-  searchOutput.addEventListener("keypress", (event) => {    
-    // event.preventDefault();
-    if (event.key === "Enter") {
-      console.log(1);
-      console.log(event)
-      notFindText.classList.remove("open");
-      searchResults.classList.remove('hide');
-    }
+  function openModal() {
+    modal.classList.toggle('show');
+    document.body.style.overflow = 'hidden';
+    shareLinkInput.value = document.location.href;
+  }     
 
-  });
+  modalTrigger.addEventListener('click', openModal);
 
-  searchInputBtn.addEventListener("click", () => {
-    redirectSearchResult();
-    setTimeout(pushSearchResult(), 1000);
-  });
+  modalCloseBtn.addEventListener('click', closeModal);
 
-  searchClearIcon.addEventListener('click' , () => {
-    if(searchOutput.value !== ''){
-      searchOutput.value = "";
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) {
+      closeModal();
     }
   });
 
 
-  searchOutput.addEventListener("focus", focusSearchOutput);
+//* Social share links
+
+const facebookBtn = document.querySelector('.facebook-btn'),
+      telegramBtn = document.querySelector('.telegram-btn'),
+      whatsappBtn = document.querySelector('.whatsapp-btn');
+
+function init() {
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = "Бул макаланы карап көрүңүз!";
+    facebookBtn.setAttribute('href',`https://www.facebook.com/sharer.php?u=${postUrl}`);
+    telegramBtn.setAttribute('href',`https://t.me/share/url?url=${postUrl}&text=${postUrl}`);
+    whatsappBtn.setAttribute('href',`https://api.whatsapp.com/send?text=${postUrl}`);
+}
+
+init();
+
+   
+  /* Copy url in Modal window */
+
+  const copyShareBtn =  document.getElementById('share-link-btn'),
+    copyText = document.querySelector('.share-site-link input'),
+    copyInfoPopup = document.querySelector('.copy-popup'),
+    shareLinkInput = document.querySelector('#link-input');
+
+  copyShareBtn.addEventListener('click', () => {
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    copyInfoPopup.classList.add('show');
+
+  setTimeout(() => {
+    copyInfoPopup.classList.remove('show');
+    
+  }, 1500);
+    
+  });
+
 });
 
-// searchFormInput.addEventListener("keyup", (event) => {
-//   if (event.key === "Enter") {
-//     searchInputBtn.click();
-//   }
-// });
+
+
 
 
 

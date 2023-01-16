@@ -84,7 +84,7 @@
         </div>
         <form class="search-form">
             <div class="container search-form__inner">
-                <input id="text-input" type="text" placeholder="Текстти жазыңыз" value>
+                <input id="text-input" type="search" placeholder="Текстти жазыңыз" value>
                 <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
             </div>
         </form> 
@@ -148,14 +148,70 @@
                          <div class="sticky-block__comment">
                              <img src="./assets/icons/comment-icon.svg" alt="comment icon">
                          </div>
-                         <div class="sticky-block__share">
-                             <img src="./assets/icons/share-icon.svg" alt="share icon">
+                         <div data-modal class="sticky-block__share">
+                             <img  src="./assets/icons/share-icon.svg" alt="share icon">
                          </div>
                      </div> 
                 </div>
             </div>
+            <div class="modal">
+                <div class="modal__dialog">
+                    <div class="modal__content">
+                        <div class="share">
+                            <p>Бөлүшүү</p>
+                            <img data-close src="./assets/icons/modal-close.svg" alt="close-icon">
+                        </div>
+                        <div class="social-media-block">
+                            <a href="#" class="facebook-btn">
+                                <img src="./assets/images/facebook.png" alt="facebook icon">
+                            </a>
+                            <a href="#" class="whatsapp-btn">
+                                <img src="./assets/images/whatsapp.png" alt="whatsapp icon">
+                            </a>
+                            <a href="#" class="telegram-btn">
+                                <img src="./assets/images/Telegram_logo.svg.webp" alt="telegram icon">
+                            </a>
+                        </div>
+                        <div class="share-site-link">
+                            <input id="link-input" type="text" value>
+                            <img id="share-link-btn" src="./assets/icons/copy-icon.svg" alt="copy icon">
+                        </div>
+                        <div class="copy-popup">
+                            <p>Kөчүрүлдү!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
        </section>
-       
+       <section class="comment container">
+            <div class="comment__wrapper">
+                <form class="comment__form">
+                    <input id="comment-name" class="comment__name" type="text" placeholder="Аты-жөнүңүз">
+                    <!-- <input id="commen-body" class="comment__body" type="text" placeholder="Пикир"> -->
+                    <textarea class="comment__body" id="commen-body" cols="30" rows="3" placeholder="Пикир"></textarea>
+                    <button class="comment__submit">Пикир калтыруу</button>
+                </form>
+                <div class="comments__group">
+                    <p class="comment__counter">(Пикирлер 10)</p>
+                    <hr>
+                    <div class="comment__field">
+                        <p class="comment__field-name">Асан Асанов</p>
+                        <p class="comment__field-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, doloribus!</p>
+                        <div class="feedback-group">
+                            <div class="like-item">
+                                <img src="./assets/icons/like.svg" alt="like icon">
+                                <p>0</p>
+                            </div>
+                            <div class="like-item">
+                                <img src="./assets/icons/Vector.svg" alt="unlike icon">
+                                <p>0</p>
+                            </div>
+                            <p>жооп берүү</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -196,7 +252,6 @@
             </div>
         </div>  
     </footer> 
-
     <script src="./js/app.js"></script>
 </body>
 </html>

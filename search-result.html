@@ -84,69 +84,147 @@
         </div>
         <form class="search-form">
             <div class="container search-form__inner">
-                <input id="text-input" type="text" placeholder="Текстти жазыңыз" value>
+                <input id="text-input" type="search" placeholder="Текстти жазыңыз" value>
                 <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
             </div>
         </form> 
     </header>  
     <main>
         <div class="container">
-            <form class="search-result">
+           <form class="search-result">
                 <label for="">Издөө жыйынтыгы:</label>
                 <div class="search-result__input">
                     <input id="text-output" type="text" value>
                     <img src="./assets/icons/search-close.svg" alt="close icon">
                 </div>
-            </form>
+            </form> 
             <div class="not-find">
                 <p>СУРООҢУЗ боюнча ЭЧ НЕРСЕ ТАБЫЛГАН жок</p>
+            </div> 
+            <div class="tab-btns">
+                <button class="tab-btn active">Ырлар</button>
+                <button class="tab-btn">Акындар</button>
             </div>
-            
             <div class="search-result__date">
                 <div class="tab-wrapper">
-                    <div class="search-list">
+                    <div  id="paginated-list" class="search-list search-list_1">
                         <ul>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>Aта журтум</h5>
                                 <p>...Ата Журтум, тууган элим, Мекеним...</p>
                                 <h6>Алыкул Осмонов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>АТА-ЖУРТКА ЖОЛУГУУ</h5>
                                 <p>...Кейибей тур кулунуңа, Ата-Журт...</p>
                                 <h6>Зайырбек Ажыматов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>АТАСЫ КУБАНДЫ </h5>
                                 <p>...Ата Журтум, тууган элим, Мекеним...</p>
                                 <h6>Алыкул Осмонов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>АТА-ЖУРТКА ЖОЛУГУУ</h5>
                                 <p>...Кейибей тур кулунуңа, Ата-Журт...</p>
                                 <h6>Зайырбек Ажыматов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>АТАСЫ КУБАНДЫ </h5>
                                 <p>...Ата Журтум, тууган элим, Мекеним...</p>
                                 <h6>Алыкул Осмонов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>СҮЙҮҮ ЖАНА МЕН</h5>
                                 <p>Сүйүү эмне? Сүттөй таза колукту!</p>
                                 <h6>Алыкул Осмонов</h6>
                             </li>
-                            <li class="search-list__item">
+                            <li class="search-list__item paginated-card">
                                 <h5>СҮЙҮҮ ЖАНА МЕН</h5>
                                 <p>Сүйүү эмне? Сүттөй таза колукту!</p>
                                 <h6>Алыкул Осмонов</h6>
                             </li>
                         </ul>
+                        <nav class="pagination-container">
+                            <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+                                <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.67578 1.7251L1.64669 11.4751L9.67578 21.2251" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        
+                            <div id="pagination-numbers">
+                        
+                            </div>
+                        
+                            <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+                                <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.9165 21.25L9.94559 11.5L1.9165 1.75" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </nav>
+                    </div>
+                     <!-- tab akyn -->
+                     <div id="paginated-list" class="search-list  search-list_2">
+                        <ul>
+                            <li class="search-list__item paginated-card">
+                                <p>Тургунбаев Сүйөркул</p>
+                            </li>
+                            <li class="search-list__item paginated-card">
+                                <p>Турсунбаев Жылдызбек</p>
+                            </li>
+                            <li class="search-list__item paginated-card">
+                                <p>Турсунбеков Чыныбай</p>
+                            </li>
+                            <li class="search-list__item paginated-card">
+                                <p>Турсунов Эрнис</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> 
+         </div>
     </main> 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <a class="footer_logo-link" href="index.html" >
+                        <img src="./assets/images/logo.png" alt="logotype" class="footer__logo-img">
+                    </a>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="poets.html">Акындар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Ырлар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Категориялар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Биз жөнүндө</a></li>
+                    </ul>
+                </nav>
+                <ul class="social-menu">
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/facebook.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/instagramm.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/mail.svg" alt="mail">
+                        </a>  
+                    </li>             
+                </ul>
+                <div class="copyright">
+                    <p><span>&copy;</span> Copyright “Ак барак”.  Баардык укуктар корголгон</p>
+                </div>
+            </div>
+        </div>  
+    </footer>
     <script src="./js/app.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/pagination.js"></script>
 </body>
 </html>
