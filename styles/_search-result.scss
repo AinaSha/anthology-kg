@@ -131,4 +131,125 @@
 }
 
 
+@media (max-width: 768px) {
+    .search-result {
+    
+        label {
+            font-size: 18px;
+        }
+    }
 
+    .tab-btns {
+        margin-bottom: 48px;
+      
+    
+        .tab-btn {
+            font-size: 16px;
+            width: 143px;
+            height: 45px;
+        }
+    }  
+    
+    .search-list {
+        width: 93%;
+        margin: 0 auto;
+    
+        ul {
+            margin-bottom: 80px;
+        }
+    
+        &__item {
+            width: 80%;
+            list-style-type:disc;
+            font-size: 20px;
+            color: $color-blue;
+        }
+
+        &__item h5 {
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    
+        &__item p {
+            font-weight: 400;
+            font-size: 16px;
+            margin: 10px 0px;
+        }
+    
+        &__item h6 {
+            font-size: 14px;
+        }
+    }  
+}
+
+
+@media (max-width: 600px) {
+    .search-result {
+        label {
+            font-size: 16px;
+        }
+
+        &__input img{
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .tab-btns {
+        margin-bottom: 48px;
+        text-align: center;
+    
+        .tab-btn {
+            font-size: 14px;
+            width: 143px;
+            height: 45px;
+        }
+    }
+    
+    .search-list {
+    
+        ul {
+            margin-bottom: 80px;
+        }
+    
+        &__item {
+            width: 80%;
+            list-style-type:disc;
+            font-size: 20px;
+            color: $color-blue;
+        }
+
+        &__item h5 {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    
+        &__item p {
+            font-weight: 400;
+            font-size: 14px;
+            margin: 10px 0px;
+        }
+    
+        &__item h6 {
+            font-size: 12px;
+        }
+    }  
+}
+
+@media (max-width: 475px) {
+    .tab-btns {
+        
+        .tab-btn {
+            font-size: 14px;
+            width: 120px;
+            height: 35px;
+            border-radius: 10px;
+        }
+  
+        .tab-btn + .tab-btn {
+            margin-left: 10px;
+        } 
+    }
+}
