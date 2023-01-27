@@ -103,8 +103,8 @@
                                 <p>1928-1960</p>
                             </div>
                             <div class="profile-btn">
-                                <button class="profile-btn1"><a href="#">Өмүр баяны</a></button>
-                                <button class="profile-btn2"><a href="#">Ырлары</a></button> 
+                                <button class="profile-btn1"><a href="poet-life.html">Өмүр баяны</a></button>
+                                <button class="profile-btn2"><a href="poets.html">Ырлары</a></button> 
                             </div>
                         </div>
                     </div>  
@@ -141,43 +141,109 @@
                     </div>
                     <div class="sticky-block">
                         <div class="sticky-block__comment">
-                            <img src="./assets/icons/comment-icon.svg" alt="comment icon">
+                            <img data-comment src="./assets/icons/comment-icon.svg" alt="comment icon">
                         </div>
                         <div class="sticky-block__share">
                             <img data-modal src="./assets/icons/share-icon.svg" alt="share icon">
                         </div>
                     </div>
-                </div>
-                <div class="modal">
-                    <div class="modal__dialog">
-                        <div class="modal__content">
-                            <div class="share">
-                                <p>Бөлүшүү</p>
-                                <img data-close src="./assets/icons/modal-close.svg" alt="close-icon">
-                            </div>
-                            <div class="social-media-block">
-                                <a href="#" class="facebook-btn">
-                                    <img src="./assets/images/facebook.png" alt="facebook icon">
-                                </a>
-                                <a href="#" class="whatsapp-btn">
-                                    <img src="./assets/images/whatsapp.png" alt="whatsapp icon">
-                                </a>
-                                <a href="#" class="telegram-btn">
-                                    <img src="./assets/images/Telegram_logo.svg.webp" alt="telegram icon">
-                                </a>
-                            </div>
-                            <div class="share-site-link">
-                                <input id="link-input" type="text" value>
-                                <img id="share-link-btn" src="./assets/icons/copy-icon.svg" alt="copy icon">
-                            </div>
-                            <div class="copy-popup">
-                                <p>Kөчүрүлдү!</p>
+                    <div class="modal">
+                        <div class="modal__dialog">
+                            <div class="modal__content">
+                                <div class="share">
+                                    <p>Бөлүшүү</p>
+                                    <img data-close src="./assets/icons/modal-close.svg" alt="close-icon">
+                                </div>
+                                <div class="social-media-block">
+                                    <a href="#" class="facebook-btn">
+                                        <img src="./assets/images/facebook.png" alt="facebook icon">
+                                    </a>
+                                    <a href="#" class="whatsapp-btn">
+                                        <img src="./assets/images/whatsapp.png" alt="whatsapp icon">
+                                    </a>
+                                    <a href="#" class="telegram-btn">
+                                        <img src="./assets/images/Telegram_logo.svg.webp" alt="telegram icon">
+                                    </a>
+                                </div>
+                                <div class="share-site-link">
+                                    <input id="link-input" type="text" value>
+                                    <img id="share-link-btn" src="./assets/icons/copy-icon.svg" alt="copy icon">
+                                </div>
+                                <div class="copy-popup">
+                                    <p>Kөчүрүлдү!</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
        </section> 
+       <section  class="comment container">
+        <div class="comment__wrapper">
+            <form class="comment__form">
+                <input  class="comment__name" id="name" type="text" placeholder="Аты-жөнүңүз">
+                <textarea class="comment__body" id="comment" cols="30" rows="3" placeholder="Пикир"></textarea>
+                <button type="submit" id="add-comment" class="comment__submit">Пикир калтыруу</button>
+            </form>
+            <div class="comments__group">
+                <p class="comment__counter">(Пикирлер: <span>10</span>)</p>
+                <hr>
+            </div>
+            <ul class="comment__list" id="commentsList">
+                <li id="comment-${id}" class="child-list-item">
+                    <p class="comment__field-name">Asan</p>
+                    <p class="comment__field-body">Sonun! Keremet chygarmalar jaratylgan!</p> 
+                    <div class="feedback-group">
+                        <div class="like-group">
+                            <div class="like-item">
+                                <a href="#" role="button" id="upvotes-${id}">
+                                    <img src="./assets/icons/like.svg" alt="like icon">
+                                </a>
+                                <p>0</p>
+                            </div>
+                            <div class="dislike-item">
+                                <a href="#" role="button" id="downvotes-${id}">
+                                    <img src="./assets/icons/unlike.svg" alt="unlike icon">
+                                </a>	
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <a class="reply" href="#" role="button" id="reply-${id}">жооп берүү</a>	
+                    </div>
+                    <ul class="comment__list comment__list-child" id="commentsListChild">
+                        <li>
+                            <form class="comment__form">
+                                <input  class="comment__name" id="name" type="text" placeholder="Аты-жөнүңүз">
+                                <textarea class="comment__body" id="comment" cols="30" rows="3" placeholder="Пикир"></textarea>
+                                <button type="submit" id="add-comment" class="comment__submit">Пикир калтыруу</button>
+                            </form>
+                            <div class="childListElem">
+                                <p class="comment__field-name">Uson</p>
+                                <p class="comment__field-body">Koshulam!</p> 
+                                <div class="feedback-group">
+                                    <div class="like-group">
+                                        <div class="like-item">
+                                            <a href="#" role="button" id="upvotes-${id}">
+                                                <img src="./assets/icons/like.svg" alt="like icon">
+                                            </a>
+                                            <p>0</p>
+                                        </div>
+                                        <div class="dislike-item">
+                                            <a href="#" role="button" id="downvotes-${id}">
+                                                <img src="./assets/icons/unlike.svg" alt="unlike icon">
+                                            </a>	
+                                            <p>0</p>
+                                        </div>
+                                    </div>
+                                    <a class="reply" href="#" role="button" id="reply-${id}">жооп берүү</a>	
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
     </main>
     <footer class="footer">
         <div class="container">

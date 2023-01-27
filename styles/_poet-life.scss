@@ -1,11 +1,9 @@
 @import './vars';
 
 .poet-life {
-    position: relative;
-
+    
     &__wrapper {
         display: flex;
-
     }
 
     &__inner {
@@ -44,6 +42,10 @@
 
 @media (max-width: 768px) {
     .poet-life {
+        &__inner {
+            margin: 0 auto 50px auto;
+        }
+
         h4 {
             font-size: 18px;
         }
@@ -71,3 +73,6 @@
         }
     }
 }
+
+
+

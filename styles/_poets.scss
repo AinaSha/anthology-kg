@@ -2,7 +2,7 @@
 
 .poets {
     margin-bottom: 107px;
-
+    
     &__inner h2 {
         @include section-title;
         color: $color-blue;
@@ -15,15 +15,17 @@
         display: grid;
         grid-template-columns: auto auto auto auto;
         gap: 40px;
+        // position: relative;
+        // z-index: 1;
     }
+
+
 
     &__gallery .card {
         box-shadow:none;
         background-color: #fff;
         cursor: pointer;
         transition: all 0.3s ease;
-        // position: relative;
-        // z-index: 1;
     }
 
     .card:hover {

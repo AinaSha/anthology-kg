@@ -9,6 +9,7 @@
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+    z-index: 3;
     
     &__dialog {
         max-width: 560px;

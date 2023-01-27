@@ -582,6 +582,7 @@
     }
 
     .gallery-card {
+
         &__inner {
             max-width: 366px;
             display: flex;
@@ -596,8 +597,6 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        position: relative;
-        z-index: -1;
     }
 
     .poem-details h4,
@@ -617,15 +616,16 @@
         color: rgba(0, 0, 0, 0.65);
     }
 
-    &__inner .section-button {
-        position: relative;
+    &__inner .section-button {  
+    position: relative;
+    z-index: 5;
     }
 
     &__tracery {
         content: url('../assets/icons/half-tracery.svg');
         position: absolute;
-        top: -65px;
-        transform: translate(-308px, 0px);
+        top: 2900px;
+        transform: translate(355px, 0px);
     }
 }
 
@@ -744,7 +744,7 @@
     @include button;
     display: block;
     margin: 0 auto;
- 
+    cursor: pointer;
 }
 
 .section-button a {

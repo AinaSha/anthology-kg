@@ -107,6 +107,7 @@
                                 <button class="profile-btn2"><a href="profile.html">Ырлары</a></button> 
                             </div>
                         </div>
+                        <span class="profile__tracery"></span>
                     </div>  
                 </div>
             </div>
@@ -146,7 +147,7 @@
                      </div>
                      <div class="sticky-block">
                          <div class="sticky-block__comment">
-                             <img src="./assets/icons/comment-icon.svg" alt="comment icon">
+                             <img data-comment src="./assets/icons/comment-icon.svg" alt="comment icon">
                          </div>
                          <div data-modal class="sticky-block__share">
                              <img  src="./assets/icons/share-icon.svg" alt="share icon">
@@ -183,33 +184,70 @@
                 </div>
             </div>
        </section>
-       <section class="comment container">
+       <section  class="comment container">
             <div class="comment__wrapper">
                 <form class="comment__form">
-                    <input id="comment-name" class="comment__name" type="text" placeholder="Аты-жөнүңүз">
-                    <!-- <input id="commen-body" class="comment__body" type="text" placeholder="Пикир"> -->
-                    <textarea class="comment__body" id="commen-body" cols="30" rows="3" placeholder="Пикир"></textarea>
-                    <button class="comment__submit">Пикир калтыруу</button>
+                    <input  class="comment__name" id="name" type="text" placeholder="Аты-жөнүңүз">
+                    <textarea class="comment__body" id="comment" cols="30" rows="3" placeholder="Пикир"></textarea>
+                    <button type="submit" id="add-comment" class="comment__submit">Пикир калтыруу</button>
                 </form>
                 <div class="comments__group">
-                    <p class="comment__counter">(Пикирлер 10)</p>
+                    <p class="comment__counter">(Пикирлер: <span>10</span>)</p>
                     <hr>
-                    <div class="comment__field">
-                        <p class="comment__field-name">Асан Асанов</p>
-                        <p class="comment__field-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, doloribus!</p>
-                        <div class="feedback-group">
-                            <div class="like-item">
-                                <img src="./assets/icons/like.svg" alt="like icon">
-                                <p>0</p>
-                            </div>
-                            <div class="like-item">
-                                <img src="./assets/icons/Vector.svg" alt="unlike icon">
-                                <p>0</p>
-                            </div>
-                            <p>жооп берүү</p>
-                        </div>
-                    </div>
                 </div>
+                <ul class="comment__list" id="commentsList">
+                    <li id="comment-${id}" class="child-list-item">
+                        <p class="comment__field-name">Asan</p>
+                        <p class="comment__field-body">Sonun! Keremet chygarmalar jaratylgan!</p> 
+                        <div class="feedback-group">
+                            <div class="like-group">
+                                <div class="like-item">
+                                    <a href="#" role="button" id="upvotes-${id}">
+                                        <img src="./assets/icons/like.svg" alt="like icon">
+                                    </a>
+                                    <p>0</p>
+                                </div>
+                                <div class="dislike-item">
+                                    <a href="#" role="button" id="downvotes-${id}">
+                                        <img src="./assets/icons/unlike.svg" alt="unlike icon">
+                                    </a>	
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <a class="reply" href="#" role="button" id="reply-${id}">жооп берүү</a>	
+                        </div>
+                        <ul class="comment__list comment__list-child" id="commentsListChild">
+                            <li>
+                                <form class="comment__form">
+                                    <input  class="comment__name" id="name" type="text" placeholder="Аты-жөнүңүз">
+                                    <textarea class="comment__body" id="comment" cols="30" rows="3" placeholder="Пикир"></textarea>
+                                    <button type="submit" id="add-comment" class="comment__submit">Пикир калтыруу</button>
+                                </form>
+                                <div class="childListElem">
+                                    <p class="comment__field-name">Uson</p>
+                                    <p class="comment__field-body">Koshulam!</p> 
+                                    <div class="feedback-group">
+                                        <div class="like-group">
+                                            <div class="like-item">
+                                                <a href="#" role="button" id="upvotes-${id}">
+                                                    <img src="./assets/icons/like.svg" alt="like icon">
+                                                </a>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="dislike-item">
+                                                <a href="#" role="button" id="downvotes-${id}">
+                                                    <img src="./assets/icons/unlike.svg" alt="unlike icon">
+                                                </a>	
+                                                <p>0</p>
+                                            </div>
+                                        </div>
+                                        <a class="reply" href="#" role="button" id="reply-${id}">жооп берүү</a>	
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
        </section>
     </main>

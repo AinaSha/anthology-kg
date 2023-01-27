@@ -3,10 +3,11 @@
 .profile {
     background-color: #F2F3F5;
     margin: 45px 0;
-    background-image: url('../assets/images/ornament.png');
+    background-image: url('../assets/icons/tracery.svg');
     background-size: 400px 400px;
     background-position: top 50% right 0%;
     background-repeat: no-repeat;
+  
 
     &__inner {
         max-width: 1064px;
@@ -22,8 +23,6 @@
 }
 
 .profile-date {
-    // max-width: 440px;
-    // margin: 0 auto;
 
     .poet-profile h4 {
         @include details-title;
@@ -73,11 +72,17 @@
     background-color: #BC6C25;
 }
 
+@media (max-width: 1170px) {
+    .profile {
+        background-position: top 50% right -10%;
+    }
+}
+
 
 @media (max-width: 768px) {
     .profile {
         background-size: 280px 280px;
-        background-position: top 50% right 0%;
+        background-position: top 50% right -10%;
 
         .profile-img {
             height: 150px;
@@ -129,6 +134,7 @@
 @media (max-width: 600px) {
     .profile {
         background-image: none;
+       
          
         &__content {
             display: flex;
@@ -177,6 +183,7 @@
 .profile-gallery {
     margin-bottom: 100px;
 
+    
     &__wrapper {
         display: grid;
         grid-template-columns: 48.8%  48.8%;
@@ -191,6 +198,7 @@
 
     &__card {
         padding: 39px 68px;
+        cursor: pointer;
     }
 
     &__card-details {

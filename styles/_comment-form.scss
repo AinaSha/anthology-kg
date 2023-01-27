@@ -3,7 +3,7 @@
 .comment {
 
     &__wrapper {
-        margin: 40px 0;
+        margin: 40px 0 80px 0px;
         padding-left: 20px;
     }
     
@@ -15,9 +15,6 @@
         width: 50%;
         height: 40px;
         font-family: 'Bitter';
-        // @include details-title;
-        // font-weight: $fw-regular;
-        // font-size: 14px;
         text-align: left;
         padding: 0 10px;
         border: 0.935156px solid rgba(0, 69, 129, 0.35);
@@ -31,20 +28,12 @@
         width: 100%;
         padding: 10px;
         font-family: 'Bitter';
-        // @include details-title;
-        // font-weight: $fw-regular;
-        // font-size: 16px;
-        // color: #000;
         border: 0.935156px solid rgba(0, 69, 129, 0.35);
         text-align: left;
         resize: none;
 
         &::placeholder {
             font-family: 'Bitter';
-            // font-weight: $fw-regular;
-            // font-size: 16px;
-            // text-align: left;
-            // padding: 10px 0 0 10px;
         }
 
         &:focus {
@@ -110,10 +99,179 @@
             color: $color-blue;
         }
 
-        .like-item {
+        .like-group {
+            display: flex;
+            gap: 15px;
+        }
+    
+        .like-item,
+        .dislike-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .reply {
+            @include details-title;
+            font-weight: 400;
+            font-size: 12px;
+            color: rgba(0, 69, 129, 0.55);
+        }
+        
+    }
+
+    .child-list-item {
+        padding: 40px 20px 0px 0px;
+    }
+
+    &__list-child {
+        padding: 20px 0px 0px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comment {
+        &__form {
+            width: 90%;
+            margin-bottom:20px;
+        } 
+
+        &__submit {
+            font-size: 14px;
+            padding: 12px 30px;
+        }
+
+        &__counter {
+            font-size: 12px;
+        }
+    
+
+        &__name {
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+
+        &__body {
+    
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+
+        
+        &__field-name {
+            font-size: 12px;
+        }
+
+        &__field-body {
+            font-size: 12px;
+        }
+
+
+        .feedback-group {
+            width: 30%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            p {
+                font-family: 'Bitter';
+                font-size: 12px;
+                color: $color-blue;
+            }
+
+            .like-group {
+                display: flex;
+                gap: 15px;
+            }
+        
+            .like-item,
+            .dislike-item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .reply {
+                @include details-title;
+                font-weight: 400;
+                font-size: 12px;
+                color: rgba(0, 69, 129, 0.55);
+            }
+            
+        }
+
+        .child-list-item {
+            padding: 20px 20px 0px 0px;
+        }
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .comment {
+        &__form {
+            width: 100%;
+            margin-bottom:20px;
+        } 
+
+        &__submit {
+            display: block;
+            margin-left: none;
+            margin: 0 auto;
+            @include details-title;
+            font-size: 12px;
+            width: 100%;
+            height: 24px;
+            color: #fff;
+            padding: 0px 0px;
+            background-color: $color-orange;
+            border-radius: 8px;
+            border: transparent;
+        }
+
+        .feedback-group {
+            width: 50%;
+
+            p {
+                font-size: 10px;
+            }
+
+        }
+    }
+
+}
+
+
+@media (max-width: 425px) {
+    .comment {
+        &__counter {
+            font-size: 10px;
+        }
+    
+
+        &__name {
+            &::placeholder {
+                font-size: 10px;
+            }
+        }
+
+        &__body {
+    
+            &::placeholder {
+                font-size: 10px;
+            }
+        }
+
+        .feedback-group {
+        width: 70%;
+
+        p {
+            font-size: 10px;
+        }
+
         }
     }
 }

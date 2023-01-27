@@ -4,82 +4,86 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // ******* Burger ***//
 
-const nav = document.querySelector(".nav"),
-  burger = document.querySelector(".burger"),
-  navItemPage = document.querySelectorAll(".nav__item-page"),
-  navLink = document.querySelectorAll(".nav__link");
+  const nav = document.querySelector(".nav"),
+    burger = document.querySelector(".burger"),
+    navItemPage = document.querySelectorAll(".nav__item-page"),
+    navLink = document.querySelectorAll(".nav__link");
 
-burger.addEventListener("click", () => {
-  nav.classList.toggle("menu-show");
-  document.body.classList.toggle("lock");
-  document.querySelector(".burger", ".nav__link").classList.toggle("active");
-});
-
-navItemPage.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    nav.classList.remove("menu-show");
-    burger.classList.remove("active");
-    document.body.classList.remove("lock");
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("menu-show");
+    document.body.classList.toggle("lock");
+    document.querySelector(".burger", ".nav__link").classList.toggle("active");
   });
-});
+
+  navItemPage.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      nav.classList.remove("menu-show");
+      burger.classList.remove("active");
+      document.body.classList.remove("lock");
+    });
+  });
+
 
 
 //******* drop-down menu */
 
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return (
-      navigator.userAgent.match(/IEMobile/i) ||
-      navigator.userAgent.match(/WPDesktop/i)
-    );
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
+  const isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return (
+        navigator.userAgent.match(/IEMobile/i) ||
+        navigator.userAgent.match(/WPDesktop/i)
+      );
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
+  };
 
-const body = document.querySelector("body");
+  const body = document.querySelector("body");
 
-if (isMobile.any()) {
-  body.classList.add("touch");
-  const arrows = document.querySelectorAll(".arrow");
+  if (isMobile.any()) {
+    body.classList.add("touch");
+    const arrows = document.querySelectorAll(".arrow");
 
-  for (let i = 0; i < arrows.length; i++) {
-    let thisNavItem = arrows[i].parentElement;
-    let thisLink = arrows[i].previousElementSibling;
-    let subMenu = arrows[i].nextElementSibling;
-    let thisArrow = arrows[i];
+    for (let i = 0; i < arrows.length; i++) {
+      let thisNavItem = arrows[i].parentElement;
+      let thisLink = arrows[i].previousElementSibling;
+      let subMenu = arrows[i].nextElementSibling;
+      let thisArrow = arrows[i];
 
-    thisLink.classList.add("parent");
+      thisLink.classList.add("parent");
 
-    thisNavItem.addEventListener("click", () => {
-      subMenu.classList.toggle("open");
-    });
+      thisNavItem.addEventListener("click", () => {
+        subMenu.classList.toggle("open");
+      });
+    }
+  } else {
+    body.classList.add("mouse");
   }
-} else {
-  body.classList.add("mouse");
-}
+
+  
 
 
 //****** Search input */
+
   const searchBtn = document.querySelector(".search-btn span"),
     searchCloseBtn = document.querySelector(".search-close"),
     searchForm = document.querySelector(".search-form");
@@ -100,11 +104,17 @@ if (isMobile.any()) {
   searchCloseBtn.addEventListener("click", closeSearchForm);
 
 
+
+
+
   // *** Modal**//
+
   const modalTrigger = document.querySelector('[data-modal]'),
         modal = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
-        console.log(modalCloseBtn);
+
+        console.log(modalTrigger);
+        console.log(modal);
   function closeModal() {
     modal.classList.toggle('show');
     document.body.style.overflow = '';
@@ -114,18 +124,22 @@ if (isMobile.any()) {
     modal.classList.toggle('show');
     document.body.style.overflow = 'hidden';
     shareLinkInput.value = document.location.href;
-  }     
+  }  
 
-  modalTrigger.addEventListener('click', openModal);
+  try {
+    modalTrigger.addEventListener('click', openModal);
+    modalCloseBtn.addEventListener('click', closeModal);
 
-  modalCloseBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) {
+        closeModal();
+      }
+    });
+  } catch(e){
+    console.log(e);
+  }
 
-  modal.addEventListener('click', (e) => {
-    if(e.target === modal) {
-      closeModal();
-    }
-  });
-
+  
 
 //* Social share links
 
@@ -134,11 +148,14 @@ const facebookBtn = document.querySelector('.facebook-btn'),
       whatsappBtn = document.querySelector('.whatsapp-btn');
 
 function init() {
-    let postUrl = encodeURI(document.location.href);
-    let postTitle = "Бул макаланы карап көрүңүз!";
+  let postUrl = encodeURI(document.location.href);
+  
+  try {
     facebookBtn.setAttribute('href',`https://www.facebook.com/sharer.php?u=${postUrl}`);
     telegramBtn.setAttribute('href',`https://t.me/share/url?url=${postUrl}&text=${postUrl}`);
     whatsappBtn.setAttribute('href',`https://api.whatsapp.com/send?text=${postUrl}`);
+  } catch(e){}
+  
 }
 
 init();
@@ -151,24 +168,46 @@ init();
     copyInfoPopup = document.querySelector('.copy-popup'),
     shareLinkInput = document.querySelector('#link-input');
 
-  copyShareBtn.addEventListener('click', () => {
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-    copyInfoPopup.classList.add('show');
+  try {
+    copyShareBtn.addEventListener('click', () => {
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      copyInfoPopup.classList.add('show');
+  
+    setTimeout(() => {
+      copyInfoPopup.classList.remove('show');
+      
+    }, 1500);
+      
+    });
+  }catch (e){}
 
-  setTimeout(() => {
-    copyInfoPopup.classList.remove('show');
+
+
+  
+
+/* Comment block */
+
+// commentTrigger and ScrollIntoView
+const commentTrigger = document.querySelector('[data-comment]'),
+      commentForm = document.querySelector('.comment__wrapper');
     
-  }, 1500);
-    
+
+const setScrollIntoView = () => {
+  commentForm.scrollIntoView({
+    block: "center",
+    inline: "nearest",
+    behavior: "smooth"
   });
+};
+
+try {
+  commentTrigger.addEventListener('click', () => {
+    setScrollIntoView();
+  });
+  
+}catch(e) {}
 
 });
-
-
-
-
-
-
 

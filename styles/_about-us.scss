@@ -4,6 +4,8 @@
     &__inner {
        width: 91%;
        margin: 100px auto 0px auto;
+       position: relative;
+       z-index: -1;
     }
 
    h2 {
