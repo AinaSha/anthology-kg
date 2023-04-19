@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анталогия</title>
+    <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="header-inner">
+                    <a class="header-logo" href="index.html">
+                        <img src="./assets/images/logo.png" alt="akbarak-logo" class="header-logo__img">
+                    </a>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item nav__item-page active">
+                                <a class="nav__link" href="poets.html">Акындар</a>
+                            </li>
+                            <li class="nav__item nav__item-page">
+                                <a class="nav__link" href="popular-poems.html">Ырлар</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">КАТЕГОРИЯЛАР</a>
+                                <span class="nav__arrow arrow"></span>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link active">Сүйүү жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жашоо жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Табият жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Жаз жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Согуш жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бакыт жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Достук жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Мекен жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Аялдар жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Эне жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Ата жөнүндө</a>
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="" class="sub-menu__link">Бала жөнүндө</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item nav__item-page">
+                                <a class="nav__link" href="about-us.html">Биз жөнүндө</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-btn">
+                        <span></span>
+                        <div class="search-close">
+                            <img src="./assets/icons/search-close.svg" alt="close icon">
+                        </div>
+                    </div>
+                </div>                 
+            </div> 
+        </div>
+        <form class="search-form">
+            <div class="container search-form__inner">
+                <input id="text-input" type="search" placeholder="Текстти жазыңыз" value>
+                <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
+            </div>
+        </form> 
+    </header>
+    <main>
+        <section class="category container">
+            <div class="category__inner">
+                <div class="btns-list">
+                    <button class="btns-list__item">Мекен</button>
+                    <button  class="btns-list__item">Сүйүү</button>
+                    <button  class="btns-list__item">Жашоо</button>
+                    <button  class="btns-list__item">Табият</button>
+                    <button  class="btns-list__item">Достук</button>
+                    <button  class="btns-list__item">Аялдар</button>
+                    <button  class="btns-list__item">Эне</button>
+                    <button  class="btns-list__item active">Ата</button>
+                    <button  class="btns-list__item">Жаз</button>
+                    <button  class="btns-list__item">Бакыт</button>
+                    <button  class="btns-list__item">Cогуш</button>
+                </div>
+                <div class="category-cards">
+                    <div id="paginated-list" class="category-cards__gallery" data-current-page="1" aria-live="polite">
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                <img src="./assets/images/Alykul.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Алыкул Осмонов</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                    <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                    <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card paginated-card">
+                            <div class="gallery-card__inner">
+                                    <img src="./assets/images/sarnogoev.png" alt="author-foto">
+                                <div class="poem-details">
+                                    <h4>Ата журтум</h4>
+                                    <p>Байдылда Сарногоев</p>
+                                </div>
+                            </div>
+                            <div class="profile-gallery__card-details">
+                                <div class="poem-container">
+                                    <p>
+                                        Ата журтум, тууган элим, Мекеним,
+                                        Жан кубатым, сүйгөн жерим секетим.
+                                        Тоо-ташыңдын, турпагыңдын, сууңдун
+                                        Мен көрбөдүм пайдасы жок бекерин
+                                        ...
+                                    </p>
+                                    <a class="poem-container-btn" href=""> 
+                                        Уландысы 
+                                        <img src="./assets/icons/Double UP.svg" alt="double up icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <nav class="pagination-container">
+                        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+                            <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.67578 1.7251L1.64669 11.4751L9.67578 21.2251" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    
+                        <div id="pagination-numbers">
+                    
+                        </div>
+                    
+                        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+                            <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.9165 21.25L9.94559 11.5L1.9165 1.75" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <a class="footer_logo-link" href="index.html" >
+                        <img src="./assets/images/logo.png" alt="logotype" class="footer__logo-img">
+                    </a>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="poets.html">Акындар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Ырлар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Категориялар</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Биз жөнүндө</a></li>
+                    </ul>
+                </nav>
+                <ul class="social-menu">
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/facebook.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/instagramm.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="social-menu__item">
+                        <a href="#">
+                            <img src="./assets/icons/mail.svg" alt="mail">
+                        </a>  
+                    </li>             
+                </ul>
+                <div class="copyright">
+                    <p><span>&copy;</span> Copyright “Ак барак”.  Баардык укуктар корголгон</p>
+                </div>
+            </div>
+        </div>  
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/pagination.js"></script>
+</body>
+</html>

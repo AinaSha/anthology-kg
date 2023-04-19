@@ -1,0 +1,236 @@
+@import "./vars";
+
+.category {
+
+    &__inner {
+        margin: 100px 0;
+    }
+
+   .btns-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 60px 0 60px 0;
+        row-gap: 20px;
+
+    &__item {
+      padding: 14px 23px;
+      background: transparent;
+      border: 1px solid #d9d9d9;
+      border-radius: 15px;
+      font-family: "Bitter";
+      font-style: normal;
+      font-weight: $fw-semiBold;
+      font-size: 16px;
+      line-height: 19px;
+      color: $color-blue;
+    }
+
+    &__item + &__item {
+      margin-left: 10px;
+    }
+
+    &__item.active {
+      background-color: $color-light-grey;
+    }
+  }
+
+  .btns-list__item + .btns-list__item {
+    margin-left: 15px;
+  }
+
+  .category-cards {
+    &__gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+      margin: 0 0 99px 0;
+      row-gap: 55px;
+    }
+  }
+
+  .gallery-card {
+    &__inner {
+      max-width: 366px;
+      display: flex;
+      align-items: center;
+      gap: 46px;
+      margin: 22px auto;
+      cursor: pointer;
+    }
+  }
+
+  .gallery-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .poem-details h4,
+  .poem-details p {
+    @include details-title;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  .poem-details h4 {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+  }
+
+  .poem-details p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  // .popular-poems__gallery {
+  //     row-gap: 55px;
+  // }
+
+  .profile-gallery__card-details {
+    margin: 0 auto;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .poem-container-btn {
+    width: 347px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $color-blue;
+    cursor: pointer;
+
+    img {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+    &__inner {
+        margin: 80px 0;
+    }
+
+    .btns-list {
+      &__item {
+        padding: 12px 14px;
+        font-weight: $fw-semiBold;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    .gallery-card img {
+      width: 118px;
+      height: 118px;
+    }
+
+    .poem-details h4 {
+      margin: 0 0 5px 0;
+      font-size: 14px;
+    }
+
+    .poem-details p {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    .poem-container {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .poem-container-btn {
+      font-size: 14px;
+      width: 270px;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 660px) {
+    .category {
+
+        &__inner {
+            margin: 60px 0;
+        }
+
+        .category-cards {
+            &__gallery {
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+              column-gap: 24px;
+              margin: 0 0 99px 0;
+              row-gap: 40px;
+            }
+        }
+      
+    }
+}
+
+
+@media (max-width: 475px) {
+    .category {
+        .btns-list {
+            margin: 40px 0 40px 0;
+            row-gap: 10px;
+        
+            &__item {
+              padding: 8px 14px;
+              font-size: 12px;
+            }  
+        }
+
+        .gallery-card {
+            &__inner {
+                max-width: 189px;
+                gap: 23px;
+            }
+        } 
+
+        .gallery-card img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .poem-details h4 {
+            margin: 0 0 0px 0;
+            font-size: 12px;
+          }
+      
+        .poem-details p {
+        font-size: 12px;
+        }
+
+        .poem-container {
+            p {
+              font-size: 12px;
+            }
+        }
+
+        .poem-container-btn {
+            font-size: 12px;
+            width: 231px;
+      
+            img {
+              width: 15px;
+              height: 15px;
+              margin-right: 10px;
+            }
+        }
+    }
+}
