@@ -10,7 +10,7 @@
     }
 
     &__logo {
-        max-width: 93px;
+        width: 70px;
         margin: 0 auto;
     }
 
@@ -85,8 +85,7 @@
 @media (max-width: 425px) {
     .footer {
         &__logo {
-            width: 60px;
-            height: 33px;
+            width: 55px;
         }
 
         &__menu-link {
