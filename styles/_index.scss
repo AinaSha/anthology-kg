@@ -617,8 +617,8 @@
     }
 
     &__inner .section-button {  
-    position: relative;
-    z-index: 5;
+        position: relative;
+        z-index: 5;
     }
 
     &__tracery {
@@ -672,9 +672,7 @@
         }
 
         &__tracery {
-            width: 300px;
-            top: 20px;
-            transform: translate(-196px, 0px);
+          display: none;
         }
 
     }
