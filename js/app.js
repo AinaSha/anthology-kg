@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //******* drop-down menu */
 
-  const isMobile = {
+ const isMobile = {
     Android: function () {
       return navigator.userAgent.match(/Android/i);
     },
@@ -61,19 +61,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (isMobile.any()) {
     body.classList.add("touch");
-    const arrows = document.querySelectorAll(".arrow");
+    let arrows = document.querySelectorAll(".nav__arrow");
 
-    for (let i = 0; i < arrows.length; i++) {
-      let thisNavItem = arrows[i].parentElement;
-      let thisLink = arrows[i].previousElementSibling;
-      let subMenu = arrows[i].nextElementSibling;
-      let thisArrow = arrows[i];
-
-      thisLink.classList.add("parent");
-
-      thisNavItem.addEventListener("click", () => {
-        subMenu.classList.toggle("open");
-      });
+    if (arrows.length > 0) {
+      for (let index = 0; index < arrows.length; index++) {
+         const menuArrow = arrows[index];
+         menuArrow.addEventListener('click', function(e) {
+          menuArrow.parentElement.classList.toggle('open');
+         });
+      }
     }
   } else {
     body.classList.add("mouse");

@@ -617,18 +617,29 @@
     }
 
     &__inner .section-button {  
-        position: relative;
+        // position: relative;
         z-index: 5;
+    }
+
+    .btn-block {
+        position: relative;
     }
 
     &__tracery {
         content: url('../assets/icons/half-tracery.svg');
         position: absolute;
-        top: 2900px;
+        top: 2889px;
         transform: translate(355px, 0px);
     }
 }
 
+@media (max-width: 1280px) {
+    .popular-poems {
+        &__tracery {
+          display: none;
+        }
+    }
+}
 
 
 @media (max-width: 768px) {
