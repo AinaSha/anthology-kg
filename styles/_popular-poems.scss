@@ -1,68 +1,156 @@
-@import './vars';
+@import "./vars";
 
 .popular-poems-page {
 
-    &__tracery1 {
-        position: absolute;
-        top: -50px;
-        right: 100px;
-    }
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 35px;
+    margin: 0 0 99px 0;
+  }
 
-    &__tracery2 {
-        position: absolute;
-        bottom: -240px;
-        left: 300px;
-    }
+  &__card-inner {
+    flex-direction: column;
+    max-width: 366px;
+    margin: 0 auto;
+  }
+
+  &__tracery1 {
+    position: absolute;
+    top: -50px;
+    right: 100px;
+  }
+
+  &__tracery2 {
+    position: absolute;
+    bottom: -240px;
+    left: 300px;
+  }
+}
+
+.poem-title-block {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  margin-bottom: 40px;
+}
+
+.poem-container {
+  font-family: 'Bitter';
+  font-weight: $fw-regular;
+  color: $color-blue;
+
+  &__poem {
+      font-size: 18px;
+      line-height: 30px;
+  }
+
+  &__continue {
+      font-size: 14px;
+      margin-top: 20px;
+
+      &::after {
+          content: url(../assets/icons/Double-Up.svg);
+          margin: 0px 0 0 5px;
+    
+      }
+  }
 }
 
 .search-input {
-   background-color: transparent;
-   border: 1px solid rgba(122, 118, 118, 0.85);
-   margin: 24px auto 0px auto;
+  background-color: transparent;
+  border: 1px solid rgba(122, 118, 118, 0.85);
+  margin: 24px auto 0px auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
+  .popular-poems-page {
+    position: relative;
 
-    .popular-poems-page {
-        position: relative;
-    
-        &__tracery1 {
-            width: 280px;
-            height: 280px;
-            position: absolute;
-            top: -20px;
-            right: -110px;
-        }
-    
-        &__tracery2 {
-            width: 280px;
-            height: 280px;
-            position: absolute;
-            bottom: -120px;
-            left: 30px;
-        }
+    &__tracery1 {
+      width: 280px;
+      height: 280px;
+      position: absolute;
+      top: -20px;
+      right: -110px;
     }
 
+    &__tracery2 {
+      width: 280px;
+      height: 280px;
+      position: absolute;
+      bottom: -120px;
+      left: 30px;
+    }
+  }
+
+  .poem-container {
+    font-family: 'Bitter';
+    font-weight: $fw-regular;
+    color: $color-blue;
+
+    &__poem {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    &__continue {
+        font-size: 12px;
+        margin-top: 20px;
+
+        &::after {
+            content: url(../assets/icons/Double-Up.svg);
+            margin: 0px 0 0 5px;
+      
+        }
+    }
+  }
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 767px)  {
     .popular-poems-page {
- 
-        &__tracery1 {
-            width: 168px;
-            height: 168px;
-            position: absolute;
-            top: 43px;
-            right: 0px;
+
+        .poem-title-block {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+          }
+        
+
+        &__gallery {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 70px 35px;
+          margin: 0 0 99px 0;
         }
-    
-        &__tracery2 {
-            width: 168px;
-            height: 168px;
-            position: absolute;
-            bottom: -120px;
-            left: 30px;
-        }
+        
     }
+}
+
+@media (max-width: 475px) {
+  .popular-poems-page {
+    &__card-inner {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    &__tracery1 {
+      width: 168px;
+      height: 168px;
+      position: absolute;
+      top: 43px;
+      right: 0px;
+    }
+
+    &__tracery2 {
+      width: 168px;
+      height: 168px;
+      position: absolute;
+      bottom: -120px;
+      left: 30px;
+    }
+  }
 }

@@ -40,7 +40,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .poet-life {
         &__inner {
             margin: 0 auto 50px auto;
@@ -70,7 +70,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .poet-life {
         h4 {
             font-size: 16px;

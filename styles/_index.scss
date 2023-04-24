@@ -642,7 +642,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .popular-poems {
         background-size: 300px 300px;
         background-position: top 40% right 55%;
@@ -665,12 +665,12 @@
         } 
 
         .poem-details h4 {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 17px;
         }
 
         .poem-details p {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         &__gallery {
@@ -690,7 +690,7 @@
 
 }
 
-@media (max-width: 660px) {
+@media (max-width: 767px) {
     .popular-poems {
         &__inner {
             margin: 80px 0 71px 0;
@@ -709,9 +709,7 @@
 }
 
 
-
-
-@media (max-width: 426px) {
+@media (max-width: 475px) {
     .popular-poems {
         background-size: 250px 250px;
         background-position: top 40% right -60%;
@@ -722,8 +720,8 @@
         }
 
          .gallery-card img {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
         }  
         
         .gallery-card {
@@ -734,12 +732,12 @@
         } 
 
         .poem-details h4 {
-            font-size: 12px;
+            font-size: 14px;
             margin: 0 0 7px 0;
           }
 
         .poem-details p {
-            font-size: 10px;
+            font-size: 12px;
             line-height: 12px;
         }
 

@@ -41,22 +41,6 @@
     }
 }
 
-.not-find {
-    display: none;
-}
-
-.not-find.open {
-    display: block;
-}
-
-.not-find p {
-    @include details-title;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-
-
 .tab-btns {
     margin-bottom: 48px;
 

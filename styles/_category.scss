@@ -14,7 +14,8 @@
         row-gap: 20px;
 
     &__item {
-      padding: 14px 23px;
+      width: 90px;
+      height: 40px;
       background: transparent;
       border: 1px solid #d9d9d9;
       border-radius: 15px;
@@ -24,9 +25,6 @@
       font-size: 16px;
       line-height: 19px;
       color: $color-blue;
-    }
-
-    &__item + &__item {
       margin-left: 10px;
     }
 
@@ -47,6 +45,7 @@
       margin: 0 0 99px 0;
       row-gap: 55px;
     }
+
   }
 
   .gallery-card {
@@ -91,29 +90,10 @@
     }
   }
 
-  .poem-container-btn {
-    width: 347px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    color: $color-blue;
-    cursor: pointer;
-    
-    &::after {
-      content: url(../assets/icons/Double-Up.svg);
-      margin: 5px 0 0 8px;
 
-    }
-    // img {
-    //   width: 15px;
-    //   height: 15px;
-    //   // margin-right: 10px;
-    // }
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
   .category {
     &__inner {
         margin: 80px 0;
@@ -135,35 +115,18 @@
 
     .poem-details h4 {
       margin: 0 0 5px 0;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .poem-details p {
       font-size: 14px;
       color: rgba(0, 0, 0, 0.65);
     }
-
-    .poem-container {
-      p {
-        font-size: 14px;
-      }
-    }
-
-    .poem-container-btn {
-      font-size: 14px;
-      width: 270px;
-
-      img {
-        width: 15px;
-        height: 15px;
-        margin-right: 10px;
-      }
-    }
   }
 }
 
 
-@media (max-width: 660px) {
+@media (max-width: 767px) {
     .category {
 
         &__inner {
@@ -174,9 +137,8 @@
             &__gallery {
               display: grid;
               grid-template-columns: repeat(1, 1fr);
-              column-gap: 24px;
-              margin: 0 0 99px 0;
-              row-gap: 40px;
+              gap: 70px 35px;
+              margin: 60px 0 99px 0;
             }
         }
       
@@ -204,34 +166,19 @@
         } 
 
         .gallery-card img {
-            width: 60px;
-            height: 60px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
         }
 
         .poem-details h4 {
             margin: 0 0 0px 0;
-            font-size: 12px;
+            font-size: 14px;
           }
       
         .poem-details p {
         font-size: 12px;
         }
-
-        .poem-container {
-            p {
-              font-size: 12px;
-            }
-        }
-
-        .poem-container-btn {
-            font-size: 12px;
-            width: 231px;
-      
-            img {
-              width: 15px;
-              height: 15px;
-              margin-right: 10px;
-            }
-        }
+   
     }
 }
