@@ -536,13 +536,13 @@
 }
 
 .card-content {
-    row-gap: 24px;
+    row-gap: 12px;
     padding: 12px 0 42px 0;
 }
 
 .card-content h4 ,
 .card-content p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .swiper-pagination.swiper-pagination-bullets.slide-pag {
@@ -619,6 +619,7 @@
     &__inner .section-button {  
         // position: relative;
         z-index: 5;
+        cursor: pointer;
     }
 
     .btn-block {
@@ -628,7 +629,7 @@
     &__tracery {
         content: url('../assets/icons/half-tracery.svg');
         position: absolute;
-        top: 2889px;
+        top: 3114px;
         transform: translate(355px, 0px);
     }
 }

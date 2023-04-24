@@ -6,7 +6,9 @@
     background-color: $color-blue;
  
     &__inner {
-        margin: 40px 0 38px 0;
+        display: flex;
+        align-items: center;
+        margin: 40px 0 0px 0;
     }
 
     &__logo {
@@ -22,25 +24,24 @@
         width: 100%;
     }
 
-    &__nav {
-        width: 68%;
-        margin: 35px auto;
-    }
-
-    &__menu-list {
-        max-width: 100%;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     &__menu-link {
-        font-weight: $fw-semiBold;
-        font-size: 16px;
+        font-size: 10px;
         color: $color-white;
-        text-decoration: none;
         text-transform: uppercase;
+    }
+
+    .social-menu>li img {
+        width: 35px;
+        height: 35px;
+    } 
+
+    .social-menu__item + .social-menu__item {
+        margin-left: 15px;
+    }
+
+    .copyright p {
+        font-size: 10px;
+        margin-bottom: 20px;
     }
 
 }
@@ -49,51 +50,33 @@
 @media (max-width: 768px) {
 
     .footer {
-        
-        &__inner {
-            margin: 20px 0;
-        }
-
-        &__nav {
-            width: 68%;
-            margin: 20px auto;
-        }
-
-        &__menu-link {
-            font-size: 12px;
-            line-height: 17px;
-        }
-    }
-    
-}
-
-
-
-@media (max-width: 550px) {
-    .footer {
-        &__menu-list {
-            flex-direction: column;
-        }
-
-        &__menu-item + &__menu-item {
-            margin-top: 12px;
-        }
-    }
-    
-}
-
-@media (max-width: 425px) {
-    .footer {
         &__logo {
-            width: 55px;
+            width: 50px;
+        }
+       
+        .social-menu>li img {
+            width: 30px;
+            height: 30px;
+        } 
+   }
+    
+}
+
+
+@media (max-width: 475px) {
+    .footer {
+        &__inner {
+            flex-direction: column;
+            margin: 20px 0 0px 0;
         }
 
-        &__menu-link {
-            font-size: 10px;
+        &__logo {
+            width: 40px;
+            margin-bottom: 15px;
         }
 
         &__nav {
-            margin: 28px auto 20px auto;
+            display: none;
         }
     }
 }
