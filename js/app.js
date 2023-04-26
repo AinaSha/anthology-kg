@@ -235,8 +235,11 @@ function checkWidth() {
 }
 
 function setParams(w) {
+  if (w < 475) {
+    slidesPerPage = 1;
+} else{
   if (w < 575) {
-      slidesPerPage = 2;
+    slidesPerPage = 2;
   } else {
       if (w < 768) {
           slidesPerPage = 3;
@@ -248,6 +251,8 @@ function setParams(w) {
           }
       }
   }
+}
+  
   slidesCount = slides - slidesPerPage;
   if (currentPosition > slidesCount) {
       currentPosition -= slidesPerPage;
