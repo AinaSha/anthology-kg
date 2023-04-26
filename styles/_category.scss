@@ -6,38 +6,7 @@
         margin: 100px 0;
     }
 
-   .btns-list {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 60px 0 60px 0;
-        row-gap: 20px;
-
-    &__item {
-      width: 90px;
-      height: 40px;
-      background: transparent;
-      border: 1px solid #d9d9d9;
-      border-radius: 15px;
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: $fw-semiBold;
-      font-size: 16px;
-      line-height: 19px;
-      color: $color-blue;
-      margin-left: 10px;
-    }
-
-    &__item.active {
-      background-color: $color-light-grey;
-    }
-  }
-
-  .btns-list__item + .btns-list__item {
-    margin-left: 15px;
-  }
-
-  .category-cards {
+    .category-cards {
     &__gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -89,11 +58,73 @@
       font-size: 18px;
     }
   }
+}
 
+
+.slider-container {
+  height: 100px;
+  max-width: 1280px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 60px;
+
+  .btn {
+    position: absolute;
+    top: calc(50% - 9px);
+    height: 15px;
+    width: 15px;
+    border-left: 2px solid #5f96ce;
+    border-top: 2px solid #5f96ce;
+    cursor: pointer;
+  }
+  
+  .btn.inactive {
+    border-color: $color-light-grey;
+  }
+  
+  .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 8px
+  }
+  
+  .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 8px;
+  }
 
 }
 
-@media (max-width: 999px) {
+.slider {
+  display: flex;
+  align-items: center;
+  width: 1000%;
+  height: 100%; 
+  transition: all .5s;
+
+  .slide-btn {
+    height: 80%;
+    margin: auto 10px;
+    padding: 0px 35px;
+    background: transparent;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: $fw-semiBold;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-blue;
+    cursor: pointer;
+  }
+
+  .slide-btn.active {
+  background-color: $color-light-grey;
+ }
+}
+
+
+@media (max-width: 1024px) {
   .category {
     &__inner {
         margin: 80px 0;
@@ -143,6 +174,16 @@
         }
       
     }
+
+    .slider {
+
+      .slide-btn {
+        height: 60%;
+        padding: 0px 30px;
+        font-size: 14px;
+      }
+    
+   }
 }
 
 
@@ -180,5 +221,15 @@
         font-size: 12px;
         }
    
-    }
+      }
+
+      .slider {
+
+        .slide-btn {
+          height: 60%;
+          padding: 0px 25px;
+          font-size: 14px;
+        }
+      
+     }
 }

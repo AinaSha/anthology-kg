@@ -95,21 +95,41 @@
         </form> 
     </header>
     <main>
+        <section class="container">
+            <div class="slider-container">
+                <span onclick="slideRight()" class="btn"></span>
+                <div class="slider" id="slider">
+                    <button class="btns-list__item slide-btn">Мекен жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Сүйүү жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Жашоо жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Табият жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Достук жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Аялдар жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Эне жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Ата жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Жаз жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Бакыт жөнүндө</button>
+                    <button  class="btns-list__item slide-btn">Cогуш жөнүндө</button>
+                </div>
+                <span onclick="slideLeft()" class="btn"></span>
+            </div>
+        </section>
         <section class="category container">
             <div class="category__inner">
+            <!-- <div class="category__inner">
                 <div class="btns-list">
-                    <button class="btns-list__item">Мекен</button>
-                    <button  class="btns-list__item">Сүйүү</button>
-                    <button  class="btns-list__item">Жашоо</button>
-                    <button  class="btns-list__item">Табият</button>
-                    <button  class="btns-list__item">Достук</button>
-                    <button  class="btns-list__item">Аялдар</button>
-                    <button  class="btns-list__item">Эне</button>
-                    <button  class="btns-list__item active">Ата</button>
-                    <button  class="btns-list__item">Жаз</button>
-                    <button  class="btns-list__item">Бакыт</button>
-                    <button  class="btns-list__item">Cогуш</button>
-                </div>
+                    <button class="btns-list__item">Мекен жөнүндө</button>
+                    <button  class="btns-list__item">Сүйүү жөнүндө</button>
+                    <button  class="btns-list__item">Жашоо жөнүндө</button>
+                    <button  class="btns-list__item">Табият жөнүндө</button>
+                    <button  class="btns-list__item">Достук жөнүндө</button>
+                    <button  class="btns-list__item">Аялдар жөнүндө</button>
+                    <button  class="btns-list__item">Эне жөнүндө</button>
+                    <button  class="btns-list__item active">Ата жөнүндө</button>
+                    <button  class="btns-list__item">Жаз жөнүндө</button>
+                    <button  class="btns-list__item">Бакыт жөнүндө</button>
+                    <button  class="btns-list__item">Cогуш жөнүндө</button>
+                </div> -->
                 <div class="category-cards">
                     <div id="paginated-list" class="category-cards__gallery" data-current-page="1" aria-live="polite">
                         <a href="#" class="gallery-card paginated-card">
