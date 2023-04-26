@@ -4,6 +4,37 @@
 
     &__inner {
         margin: 100px 0;
+    } 
+
+    .btns-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      font-family: 'Bitter';
+      font-weight: 600;
+      line-height: 19px;
+      color: #004581;
+      text-align: center;
+      margin: 60px 0;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: #004581;
+        padding: 8px 15px;
+        border: 1px solid #D9D9D9;
+        border-radius: 15px;
+        margin-left: 15px;
+      }
+
+      &__item span {
+        font-size: 12px;
+      }
+
+      &__item.active {
+        background-color: $color-light-grey;
+      }
     }
 
     .category-cards {
@@ -61,82 +92,10 @@
 }
 
 
-.slider-container {
-  height: 100px;
-  max-width: 1280px;
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-  margin-top: 60px;
-
-  .btn {
-    position: absolute;
-    top: calc(50% - 9px);
-    height: 15px;
-    width: 15px;
-    border-left: 2px solid #5f96ce;
-    border-top: 2px solid #5f96ce;
-    cursor: pointer;
-  }
-  
-  .btn.inactive {
-    border-color: $color-light-grey;
-  }
-  
-  .btn:first-of-type {
-    transform: rotate(-45deg);
-    left: 8px
-  }
-  
-  .btn:last-of-type {
-    transform: rotate(135deg);
-    right: 8px;
-  }
-
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  width: 1000%;
-  height: 100%; 
-  transition: all .5s;
-
-  .slide-btn {
-    height: 80%;
-    margin: auto 10px;
-    padding: 0px 35px;
-    background: transparent;
-    border: 1px solid #d9d9d9;
-    border-radius: 15px;
-    font-family: "Bitter";
-    font-style: normal;
-    font-weight: $fw-semiBold;
-    font-size: 16px;
-    line-height: 19px;
-    color: $color-blue;
-    cursor: pointer;
-  }
-
-  .slide-btn.active {
-  background-color: $color-light-grey;
- }
-}
-
-
 @media (max-width: 1024px) {
   .category {
     &__inner {
         margin: 80px 0;
-    }
-
-    .btns-list {
-      &__item {
-        padding: 12px 14px;
-        font-weight: $fw-semiBold;
-        font-size: 14px;
-        line-height: 17px;
-      }
     }
 
     .gallery-card img {
@@ -154,24 +113,6 @@
       color: rgba(0, 0, 0, 0.65);
     }
   }
-
-  .slider {
-    .slide-btn {
-      height: 80%;
-      padding: 0px 35px;
-      font-size: 14px;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .slider {
-    .slide-btn {
-      height: 80%;
-      padding: 0px 20px;
-      font-size: 14px;
-    }
-  }
 }
 
 @media (max-width: 767px) {
@@ -180,6 +121,26 @@
         &__inner {
             margin: 60px 0;
         }
+
+        .btns-list {
+          row-gap: 15px;
+          line-height: 15px;
+          margin: 60px 0;
+    
+          &__item {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: #004581;
+            padding: 8px 15px;
+            margin-left: 15px;
+          }
+    
+          &__item span {
+            font-size: 10px;
+          }
+        }
+    
 
         .category-cards {
             &__gallery {
@@ -190,16 +151,6 @@
             }
         }
      }
-}
-
-@media (max-width: 600px) {
-  .slider {
-    .slide-btn {
-      height: 80%;
-      padding: 0px 20px;
-      font-size: 14px;
-    }
-  }
 }
 
 

@@ -216,6 +216,8 @@
         font-weight: $fw-medium;
         font-size: 22px;
         color: #2187ED;
+        // text-align: start;
+        margin-bottom: 30px;
         text-align: center;
     }
 
@@ -224,13 +226,12 @@
     }
 
     &__card-details p {
-        @include details-title;
-        font-weight: 400;
+        font-family: 'Bitter';
+        font-weight: $fw-regular;
+        color: $color-blue;
+        font-size: 18px;
         line-height: 30px;
-        color: #004581;
-        white-space: pre-line;
-        display: inline-block;
-        text-align: left;
+        // text-align: start;
     }
 }
 
