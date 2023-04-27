@@ -232,7 +232,7 @@
             font-size: 20px;
         }
         .tracery {
-            top: 70px;
+            top: 741px;
             transform: translate(420px, 0px); 
         }
     }
@@ -584,7 +584,7 @@
     }
 
     &__inner {
-        margin: 100px 0 122px 0;
+        margin: 100px 0 0px 0;
       
     }
 
@@ -635,15 +635,10 @@
         cursor: pointer;
     }
 
-    .btn-block {
-        position: relative;
-    }
-
-    &__tracery {
-        content: url('../assets/icons/half-tracery.svg');
-        position: absolute;
-        top: 3114px;
-        transform: translate(355px, 0px);
+    .tracery {
+        display: block;
+        width: 40%;
+        margin: 0 auto;
     }
 }
 
@@ -663,7 +658,7 @@
         background-repeat: no-repeat;
 
         &__inner {
-            margin: 80px 0 122px 0;
+            margin: 80px 0 0px 0;
         }
 
         h2 {
@@ -695,11 +690,6 @@
             width: 118px;
             height: 118px;
         }
-
-        &__tracery {
-          display: none;
-        }
-
     }
 
 }
@@ -707,18 +697,13 @@
 @media (max-width: 767px) {
     .popular-poems {
         &__inner {
-            margin: 80px 0 71px 0;
+            margin: 80px 0 0px 0;
         }
 
         &__gallery {
             grid-template-columns: repeat(1, 1fr);
             margin: 0 0 60px 0;            
         } 
-        
-        &__tracery {
-            display: none;
-        }
-
     }
 }
 
@@ -753,6 +738,10 @@
         .poem-details p {
             font-size: 12px;
             line-height: 12px;
+        }
+
+        .tracery {
+            display: none
         }
 
     }

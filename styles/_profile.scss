@@ -216,14 +216,12 @@
         font-weight: $fw-medium;
         font-size: 22px;
         color: #2187ED;
-        // text-align: start;
-        margin-bottom: 30px;
         text-align: center;
     }
 
-    &__card-details .poem-container {
-       text-align: center
-    }
+    // &__card-details .poem-container {
+    // //    text-align: center
+    // }
 
     &__card-details p {
         font-family: 'Bitter';
@@ -231,7 +229,10 @@
         color: $color-blue;
         font-size: 18px;
         line-height: 30px;
-        // text-align: start;
+        display: table;
+        margin: 0 auto;
+        white-space: pre-line;
+    //    text-align: justify;
     }
 }
 
