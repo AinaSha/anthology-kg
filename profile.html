@@ -1,254 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Анталогия</title>
-    <link rel="stylesheet" href="./css/styles.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.min.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header-wrapper">
-            <div class="container">
-                <div class="header-inner">
-                    <a class="header-logo" href="index.html">
-                        <img src="./assets/images/main-logo.png" alt="akbarak-logo" class="header-logo__img">
-                    </a>
-                    <div class="burger">
-                        <span></span>
-                    </div>
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item nav__item-page active">
-                                <a class="nav__link" href="poets.html">Акындар</a>
-                            </li>
-                            <li class="nav__item nav__item-page">
-                                <a class="nav__link" href="popular-poems.html">Ырлар</a>
-                            </li>
-                            <li class="nav__item">
-                                <a id="categoty-item" class="nav__link category-link" href="#">КАТЕГОРИЯЛАР
-                                </a>
-                                <svg class="nav__arrow" width="10" height="7" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 0L13.9282 9H0.0717969L7 0Z" fill="white"/>
-                                </svg>    
-                                <div class="sub-menu">
-                                    <ul class="sub-menu__list">
-                                        <li class="sub-menu__item">
-                                            <a href="category.html" class="sub-menu__link active">Сүйүү жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Жашоо жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Табият жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Жаз жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Согуш жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Бакыт жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Достук жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Мекен жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Аялдар жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Эне жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Ата жөнүндө</a>
-                                        </li>
-                                        <li class="sub-menu__item">
-                                            <a href="" class="sub-menu__link">Бала жөнүндө</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav__item nav__item-page">
-                                <a class="nav__link" href="about-us.html">Биз жөнүндө</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="search-btn">
-                        <span></span>
-                        <div class="search-close">
-                            <img src="./assets/icons/search-close.svg" alt="close icon">
-                        </div>
-                    </div>
-                </div>                 
-            </div> 
-        </div>
-        <form class="search-form">
-            <div class="container search-form__inner">
-                <input  id="text-input" type="search" placeholder="Текстти жазыңыз" value>
-                <img id="search-btn" src="./assets/icons/input-search.svg" alt="search icon">
+      <div class="header-wrapper">
+        <div class="container">
+          <div class="header-inner">
+            <a class="header-logo" href="index.html">
+              <img
+                src="./assets/images/main-logo.png"
+                alt="akbarak-logo"
+                class="header-logo__img"
+              />
+            </a>
+            <div class="burger">
+              <span></span>
             </div>
-        </form> 
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item nav__item-page active">
+                  <a class="nav__link" href="poets.html">Акындар</a>
+                </li>
+                <li class="nav__item nav__item-page">
+                  <a class="nav__link" href="popular-poems.html">Ырлар</a>
+                </li>
+                <li class="nav__item">
+                  <a id="categoty-item" class="nav__link category-link" href="#"
+                    >КАТЕГОРИЯЛАР
+                  </a>
+                  <svg
+                    class="nav__arrow"
+                    width="10"
+                    height="7"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 0L13.9282 9H0.0717969L7 0Z" fill="white" />
+                  </svg>
+                  <div class="sub-menu">
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="category.html" class="sub-menu__link active"
+                          >Сүйүү жөнүндө</a
+                        >
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Жашоо жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Табият жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Жаз жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Согуш жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Бакыт жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Достук жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Мекен жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Аялдар жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Эне жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Ата жөнүндө</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="" class="sub-menu__link">Бала жөнүндө</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav__item-page">
+                  <a class="nav__link" href="about-us.html">Биз жөнүндө</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="search-btn">
+              <span></span>
+              <div class="search-close">
+                <img src="./assets/icons/search-close.svg" alt="close icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="search-form">
+        <div class="container search-form__inner">
+          <input
+            id="text-input"
+            type="search"
+            placeholder="Текстти жазыңыз"
+            value
+          />
+          <img
+            id="search-btn"
+            src="./assets/icons/input-search.svg"
+            alt="search icon"
+          />
+        </div>
+      </form>
     </header>
     <main>
-       <section class="profile">
-            <div class="container">
-                <div class="profile__inner">
-                    <div class="profile__content">
-                        <div class="profile-img">
-                            <img src="./assets/images/sarnogoev.png" alt="akyn">
-                        </div>
-                        <div class="profile-date">
-                            <div class="poet-profile">
-                                <h4>Байдылда Сарногоев</h4>
-                                <p>1928-1960</p>
-                            </div>
-                            <div class="profile-btn">
-                                <button class="profile-btn1"><a href="poet-life.html">Өмүр баяны</a></button>
-                                <button class="profile-btn2"><a href="profile.html">Ырлары</a></button> 
-                            </div>
-                        </div>
-                    </div>  
+      <section class="profile">
+        <div class="container">
+          <div class="profile__inner">
+            <div class="profile__content">
+              <div class="profile-img">
+                <img src="./assets/images/sarnogoev.png" alt="akyn" />
+              </div>
+              <div class="profile-date">
+                <div class="poet-profile">
+                  <h4>Байдылда Сарногоев</h4>
+                  <p>1928-1960</p>
                 </div>
-            </div>
-       </section> 
-       <section class="profile-gallery">
-            <div class="container">
-                <div class="profile-gallery__inner">
-                    <div id="paginated-list" class="profile-gallery__wrapper" data-current-page="1" aria-live="polite">
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-                        <a class="profile-gallery__card paginated-card" href="poem.html">
-                            <div class="profile-gallery__card-details">
-                                    <h4>Ырдын аталышы</h4>
-                                    <div class="poem-container">
-                                        <p>
-                                            Каралуу кылып жеңемди
-                                            Калтырып жетим Медерди,
-                                        </p>
-                                    </div>
-                            </div>
-                        </a>
-       
-                    </div>
-                    <nav class="pagination-container">
-                        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
-                            <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.67578 1.7251L1.64669 11.4751L9.67578 21.2251" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    
-                        <div id="pagination-numbers">
-                    
-                        </div>
-                    
-                        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
-                            <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.9165 21.25L9.94559 11.5L1.9165 1.75" stroke="#004581" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </nav>
+                <div class="profile-btn">
+                  <button class="profile-btn1">
+                    <a href="poet-life.html">Өмүр баяны</a>
+                  </button>
+                  <button class="profile-btn2">
+                    <a href="profile.html">Ырлары</a>
+                  </button>
                 </div>
+              </div>
+              <img
+                class="tracery"
+                src="./assets/icons/tracery.svg"
+                alt="tracery"
+              />
             </div>
-       </section>
+          </div>
+        </div>
+      </section>
+      <section class="profile-gallery">
+        <div class="container">
+          <div class="profile-gallery__inner">
+            <div
+              id="paginated-list"
+              class="profile-gallery__wrapper"
+              data-current-page="1"
+              aria-live="polite"
+            >
+              <a class="profile-gallery__card paginated-card" href="poem.html">
+                <div class="profile-gallery__card-details">
+                  <h4>Ырдын аталышы</h4>
+                  <div class="poem-container">
+                    <p>
+                      Каралуу кылып жеңемди Калтырып жетим Медерди,
+                      <span class="poem-container__continue">Уландысы</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="profile-gallery__card paginated-card" href="poem.html">
+                <div class="profile-gallery__card-details">
+                  <h4>Ырдын аталышы</h4>
+                  <div class="poem-container">
+                    <p>
+                      Каралуу кылып жеңемди Калтырып жетим Медерди,
+                      <span class="poem-container__continue">Уландысы</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="profile-gallery__card paginated-card" href="poem.html">
+                <div class="profile-gallery__card-details">
+                  <h4>Ырдын аталышы</h4>
+                  <div class="poem-container">
+                    <p>
+                      Каралуу кылып жеңемди Калтырып жетим Медерди,
+                      <span class="poem-container__continue">Уландысы</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="profile-gallery__card paginated-card" href="poem.html">
+                <div class="profile-gallery__card-details">
+                  <h4>Ырдын аталышы</h4>
+                  <div class="poem-container">
+                    <p>
+                      Ата журтум, тууган элим, Мекеним, Жан кубатым, сүйгөн
+                      жерим секетим.
+                      <span class="poem-container__continue">Уландысы</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <nav class="pagination-container">
+              <button
+                class="pagination-button"
+                id="prev-button"
+                aria-label="Previous page"
+                title="Previous page"
+              >
+                <svg
+                  width="11"
+                  height="23"
+                  viewBox="0 0 11 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.67578 1.7251L1.64669 11.4751L9.67578 21.2251"
+                    stroke="#004581"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div id="pagination-numbers"></div>
+              <button
+                class="pagination-button"
+                id="next-button"
+                aria-label="Next page"
+                title="Next page"
+              >
+                <svg
+                  width="11"
+                  height="23"
+                  viewBox="0 0 11 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.9165 21.25L9.94559 11.5L1.9165 1.75"
+                    stroke="#004581"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__logo">
-                    <a class="footer_logo-link" href="#" >
-                        <img src="./assets/images/main-logo.png" alt="logotype" class="footer__logo-img">
-                    </a>
-                </div>
-                <nav class="footer__nav">
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="poets.html">Акындар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="popular-poems.html">Ырлар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Категориялар</a></li>
-                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Биз жөнүндө</a></li>
-                    </ul>
-                </nav>
-                <ul class="social-menu">
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/facebook.svg" alt="facebook">
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/instagramm.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#">
-                            <img src="./assets/icons/mail.svg" alt="mail">
-                        </a>  
-                    </li>             
-                </ul>
-            </div>
-            <div class="copyright">
-                <p><span>&copy;</span> Copyright “Ак барак”.  Баардык укуктар корголгон</p>
-            </div>
-        </div>  
-    </footer> 
-<script src="./js/app.js"></script>
-<script src="./js/pagination.js"></script>
-</body>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <a class="footer_logo-link" href="#">
+              <img
+                src="./assets/images/main-logo.png"
+                alt="logotype"
+                class="footer__logo-img"
+              />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="poets.html">Акындар</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="popular-poems.html">Ырлар</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Категориялар</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Биз жөнүндө</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="social-menu">
+            <li class="social-menu__item">
+              <a href="#">
+                <img src="./assets/icons/facebook.svg" alt="facebook" />
+              </a>
+            </li>
+            <li class="social-menu__item">
+              <a href="#">
+                <img src="./assets/icons/instagramm.svg" alt="instagram" />
+              </a>
+            </li>
+            <li class="social-menu__item">
+              <a href="#">
+                <img src="./assets/icons/mail.svg" alt="mail" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>
+            <span>&copy;</span> Copyright “Ак барак”. Баардык укуктар корголгон
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/pagination.js"></script>
+  </body>
 </html>

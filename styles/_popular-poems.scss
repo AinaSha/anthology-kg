@@ -91,8 +91,8 @@
     color: $color-blue;
 
     &__poem {
-        font-size: 14px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 25px;
     }
 
     &__continue {
@@ -126,7 +126,15 @@
           gap: 70px 35px;
           margin: 0 0 99px 0;
         }
-        
+    }
+
+    .poem-container {
+  
+      &__poem {
+          font-size: 14px;
+          line-height: 25px;
+      }
+
     }
 }
 
