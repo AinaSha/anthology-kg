@@ -223,6 +223,7 @@
     &__card-details {
         padding: 39px 68px;
     }
+    
   
     &__card-details h4 {
         @include details-title;
@@ -243,8 +244,10 @@
         white-space: pre-line;
     }
 
+ 
     .profile-gallery-continue{
-        margin-top: 30px;
+        display: inline-block;
+        margin-top: 20px;
     }
 }
 
