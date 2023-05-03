@@ -111,12 +111,14 @@
 
 @media (max-width: 768px) {
     .topscreen{
-        height: 417px;
-
+        height: 460px;
         &__wrapper {
-           background-size: 768px;
+            background-image: url('../assets/images/banner-tablet.png');
+            background-repeat: no-repeat;
+            background-size: 768px;
         }
     }
+
     .topscreen-inner {
         margin: 16px auto 100px auto;
     }
@@ -160,9 +162,11 @@
 
 @media (max-width: 575px) {
     .topscreen{
-        // height: 400px;
+        height: 360px;
         &__wrapper {
-           background-size: 580px;
+            background-image: url('../assets/images/banner-580.png');
+            background-repeat: no-repeat;
+            background-size: 575px;
         }
     }
   
@@ -251,7 +255,54 @@
     }
 }
 
+@media (max-width: 425px) {
+    .topscreen{
+        &__wrapper {
+            background-size: 424px;
+        }
+    }
 
+    .topscreen-text {
+        width:  100%;
+        margin: 46px auto 0 0;
+    
+        .title {
+            font-size: 20px;
+            line-height: 22px;
+        }
+    
+        .description {
+            width: 80%;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    
+    
+    
+        .second-text {
+            width: 40%;
+            font-size: 12px;
+            line-height: 20px;
+            padding: 24px 0px;
+            transform: rotate(-3.59deg);
+            position: absolute;
+      
+        }
+    
+        .text {
+            padding-bottom: 121px;
+        }
+    }
+}
+
+
+// @media (max-width: 360px) {
+//     .topscreen{
+//         &__wrapper {
+//             background-size: 360px;
+//         }
+//     }
+// }
 
 //***  poem section ***//
 
@@ -294,16 +345,6 @@
     }
 }
 
-// @media (max-width: 1170px) {
-//     .poem {
-//         .tracery {
-//             top: 800px;
-//             transform: translate(550px, 0px); 
-//             width: 235px;
-//             height: 235px;
-//         }
-//     }
-// }
 
 @media (max-width: 1024px) {
     .poem {
