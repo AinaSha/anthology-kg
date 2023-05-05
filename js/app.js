@@ -147,7 +147,7 @@ function init() {
   let postUrl = encodeURI(document.location.href);
   
   try {
-    facebookBtn.setAttribute('href',`https://www.facebook.com/sharer.php?u=${postUrl}`);
+    facebookBtn.setAttribute('href',`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`);
     telegramBtn.setAttribute('href',`https://t.me/share/url?url=${postUrl}&text=${postUrl}`);
     whatsappBtn.setAttribute('href',`https://api.whatsapp.com/send?text=${postUrl}`);
   } catch(e){}
